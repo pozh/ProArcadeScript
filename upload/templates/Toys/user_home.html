@@ -1,0 +1,64 @@
+<h3>!USER_NAME!'s Profile</h3>
+<ul id="Profile">
+	<li class="avatar"><img src="!SITEROOT!content/avatars/!USER_AVATAR!" alt="!USER_NAME!" /></li>
+	<li><b>Status:</b> <img src="!SITEROOT!templates/Toys/images/ico_status!USER_STATUS!.gif" alt="!USER_STATUSNAME!" /> !USER_STATUSNAME! <span class="Small">(Rating: !USER_RATING!)</span><br />
+	    <b>I'm</b> !USER_SEX!<br />
+	    <b>From:</b> !USER_LOCATION!<br />
+	    <b>Joined:</b> !USER_JOINED!</li>
+	<li><b>Last login:</b> !USER_LASTLOGIN!<br />
+	    <b>Gameplays:</b> !USER_GAMEPLAYS!<br />
+		 <b>Games submitted:</b> !USER_SUBMITS!
+<!-- BEGIN DYNAMIC BLOCK: dynAddFriend -->
+		<br /><b><a href="!SITEROOT!user/!USER_NAME!/addtofriends.html">Add to friends</a></b>
+<!-- END DYNAMIC BLOCK: dynAddFriend -->
+<!-- BEGIN DYNAMIC BLOCK: dynIsFriend -->
+		<br /><b class="vivid">Friend</b> <span class="Small">(<a href="!SITEROOT!user/!USER_NAME!/removefriend.html">Remove from friends</a>)</span>
+<!-- END DYNAMIC BLOCK: dynIsFriend -->
+		 </li>
+</ul>
+<br class="Clear" />
+
+<h3>Recent Favorites</h3>
+!USERFAVMESSAGE!
+<ul id="Favorites">
+<!-- BEGIN DYNAMIC BLOCK: dynUserFavorites -->
+	<li>
+  		<div class="Thumb">
+			<a href="!GAMEURL!"><img class="Thumb" src="!IMG!" alt="Play !GAMETITLE!" /><span class="mask"></span></a>
+		</div>
+		<a class="title" href="!GAMEURL!">!GAMETITLE!</a>
+	</li>
+<!-- END DYNAMIC BLOCK: dynUserFavorites -->
+</ul>
+<br class="Clear" />
+
+<!-- BEGIN DYNAMIC BLOCK: dynOwner -->
+<h3>Friends</h3>
+!USERFRIENDSMESSAGE!
+<!-- BEGIN DYNAMIC BLOCK: dynFriends -->
+<div class="list_user !EVENODD!">
+  	<a href="!URL!"><img class="avatar" src="!SITEROOT!content/avatars/!AVATAR!" alt="!USERNAME!" /></a>
+  	<div class="info">
+		<img src="!SITEROOT!templates/Toys/images/ico_status!STATUS!.gif" alt="!STATUSNAME!" />  <a href="!URL!" class="username!SEX!"><b>!USERNAME!</b></a><br class="Clear" />
+		<span class="Small">(!PLAYS! gameplays, !FAVS! favorite games)</span><br />
+		<b>From:</b> !LOCATION!
+	</div>
+</div>
+<!-- END DYNAMIC BLOCK: dynFriends -->
+<br class="Clear" />
+<p>&nbsp;</p>
+
+<h3>My Fans</h3>
+!USERFANSMESSAGE!
+<!-- BEGIN DYNAMIC BLOCK: dynUserFans -->
+<div class="list_user !EVENODD!">
+  	<a href="!URL!"><img class="avatar" src="!SITEROOT!content/avatars/!AVATAR!" alt="!USERNAME!" /></a>
+  	<div class="info">
+		<img src="!SITEROOT!templates/Toys/images/ico_status!STATUS!.gif" alt="!STATUSNAME!" />  <a href="!URL!" class="username!SEX!"><b>!USERNAME!</b></a><br class="Clear" />
+		<span class="Small">(!PLAYS! gameplays, !FAVS! favorite games)</span><br />
+		<b>From:</b> !LOCATION!
+	</div>
+</div>
+<!-- END DYNAMIC BLOCK: dynUserFans -->
+
+<!-- END DYNAMIC BLOCK: dynOwner -->

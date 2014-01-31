@@ -1,0 +1,19 @@
+<script type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+<h2 class="Solid">Play game</h2>
+<div class="SolidBox Combo">
+	<form action="#"><div>
+	<select name="combo" onchange="MM_jumpMenu('parent',this,0)" >
+		<option value="" selected="selected">-- Choose a game --</option>
+	<!-- BEGIN DYNAMIC BLOCK: dynCombo -->	
+		<option value="!COMBOLINK!">!COMBOTITLE!</option>
+	<!-- END DYNAMIC BLOCK: dynCombo -->
+	</select></div>
+	</form>
+</div>	

@@ -1,0 +1,88 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<h3>Filter:</h3>
+<form action="!FILTERACTION!" method="get">
+<input type="Hidden" name="action" value="listgames">
+<input type="Hidden" name="page" value="!FILTERPAGE!">
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Title (examples: game, %game)</div>
+			<div><input value="!FILTERTITLE!" class="Text Med" type="text" name="title" /></div>
+		</div>
+	</div>
+
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Category</div>
+			<div>
+				<select name="cat" class="Text Med">
+				<option value=""></option>
+<!-- BEGIN DYNAMIC BLOCK: dynCatList -->	
+				<option !CATSELECTED! value="!CATID!">!CATTITLE!</option>
+<!-- END DYNAMIC BLOCK: dynCatList -->
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="Left">
+		<div class="Block">
+			<div class="Title" >
+				<input !FEATUREDCHECKED! type="Checkbox" value="1" name="featured" />Featured Only &nbsp;&nbsp;&nbsp;
+				<input !INACTIVECHECKED! type="Checkbox" value="1" name="inactive" />Inactive Only
+			</div>
+		</div>
+	</div>
+
+	<div class="Right">
+		<div class="Block">
+			<input type="submit" value="Apply Filter" />
+	</div></div>
+
+</form>
+
+<!-- BEGIN DYNAMIC BLOCK: dynPagesTitle -->	
+<p class="Pages"><b>Pages:</b>
+<!-- END DYNAMIC BLOCK: dynPagesTitle -->
+<!-- BEGIN DYNAMIC BLOCK: dynPagesTop -->	
+<a href="content.php?action=listgames&!PAGELINK!" class="!PAGEACTIVE!">!PAGE!</a> 
+<!-- END DYNAMIC BLOCK: dynPagesTop -->
+<!-- BEGIN DYNAMIC BLOCK: dynPagesTitle -->	
+</p>
+<!-- END DYNAMIC BLOCK: dynPagesTitle -->
+
+<ul class="List">
+	<li class="Caption">
+		<span class="Cell W10 !SORTEDID!"><a href="content.php?action=listgames&sort=id&order=asc!ORDERLINK!">ID</a>  <a class="Desc" href="content.php?action=listgames&sort=id&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="content.php?action=listgames&sort=id&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W25 !SORTEDTITLE!"><a href="content.php?action=listgames&sort=title&order=asc!ORDERLINK!">Title</a> <a class="Desc" href="content.php?action=listgames&sort=title&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="content.php?action=listgames&sort=title&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W12 !SORTEDDATE!"><a href="content.php?action=listgames&sort=date&order=asc!ORDERLINK!">Date</a> <a class="Desc" href="content.php?action=listgames&sort=date&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="content.php?action=listgames&sort=date&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W12 !SORTEDPLAYS!"><a href="content.php?action=listgames&sort=plays&order=asc!ORDERLINK!">Plays</a> <a class="Desc" href="content.php?action=listgames&sort=plays&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="content.php?action=listgames&sort=plays&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W12 !SORTEDRATING!"><a href="content.php?action=listgames&sort=rating&order=asc!ORDERLINK!">Rating</a> <a class="Desc" href="content.php?action=listgames&sort=rating&order=desc!ORDERLINK!"><span>+</span></a> <a class="Asc" href="content.php?action=listgames&sort=rating&order=asc!ORDERLINK!"><span>-</span></a></span>
+		<span class="Cell W12 !SORTEDCOMMENTS!"><a href="content.php?action=listgames&sort=comments&order=asc!ORDERLINK!">Comm-s</a> <a class="Desc" href="content.php?action=listgames&sort=comments&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="content.php?action=listgames&sort=comments&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W15">Actions</span>
+	</li>
+<!-- BEGIN DYNAMIC BLOCK: dynList -->	
+	<li>
+		<span class="Cell W10">!GAMEID!</span><span class="Cell W25">!GAMETITLE!</span>
+		<span class="Cell W12">!GAMEADDED!</span><span class="Cell W12">!GAMEPLAYS!</span>
+		<span class="Cell W12">!RATING!</span><span class="Cell W12">!COMMENTS!</span>
+		<span class="Cell W15"><div  class="Btn Edit"><a title="edit game settings" href="content.php?action=editgame&id=!GAMEID!"><span class="Hide">Edit</span></a></div> 
+			<div class="Btn !FSTATE!"><a title="activate/deactivate the 'Featured' state" href="content.php?action=feature&id=!GAMEID!"><span class="Hide">!FSTATE!</span></a></div>
+			<div class="Btn !STATE!"><a title="!STATE! game" href="content.php?action=switchstate&id=!GAMEID!"><span class="Hide">!STATE!</span></a></div>
+			<div class="Btn Delete"><a title="delete game" href="content.php?action=deletegame&id=!GAMEID!"><span class="Hide">Delete</span></a></div></span>
+	</li>
+<!-- END DYNAMIC BLOCK: dynList -->
+</ul>
+
+<!-- BEGIN DYNAMIC BLOCK: dynPagesTitle -->	
+<p class="Pages"><b>Pages:</b>
+<!-- END DYNAMIC BLOCK: dynPagesTitle -->
+<!-- BEGIN DYNAMIC BLOCK: dynPages -->
+<a href="content.php?action=listgames&!PAGELINK!" class="!PAGEACTIVE!">!PAGE!</a> 
+<!-- END DYNAMIC BLOCK: dynPages -->
+<!-- BEGIN DYNAMIC BLOCK: dynPagesTitle -->	
+</p>
+<!-- END DYNAMIC BLOCK: dynPagesTitle -->
+
+!ADMINFOOTER!

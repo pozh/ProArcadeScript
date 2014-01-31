@@ -1,0 +1,17 @@
+<script type="text/javascript">
+function bookmarksite(title,url){
+if (window.sidebar) // firefox
+	window.sidebar.addPanel(title, url, "");
+else if(document.all)// ie
+	window.external.AddFavorite(url, title);
+}
+</script>
+
+<ul>
+	<li><a href="mailto:?subject=!SITEURL!%20-%20play%20flash%20arcade%20games%20for%20free!">Tell a Friend</a></li>
+	<li><a href="javascript:bookmarksite('!TITLE!', '!SITEURL!')">Add to bookmarks</a></li>
+	<li><a href="!SITEROOT!rss/">RSS</a></li>
+<!-- BEGIN DYNAMIC BLOCK: dynMainNav -->
+	<li><a href="!PAGEURL!">!PAGETITLE!</a></li>
+<!-- END DYNAMIC BLOCK: dynMainNav -->
+</ul>

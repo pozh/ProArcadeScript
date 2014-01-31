@@ -1,0 +1,102 @@
+!ADMINHEADER!
+<h2>!SITETITLE! - Site Settings</h2>
+<form action="settings.php" method="post">
+<h3>General Settings</h3>
+<div class="Left">
+	<div class="Block">
+		<div class="Title">Base Path</div>
+		<div class="Input"><input class="Med Text" type="Text" name="base_path" value="!BASEPATH!" /><span class="Error">!BASEPATHERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Site URL</div>
+		<div class="Input"><input class="Med Text" type="Text" name="site_url" value="!SITEURL!" /><span class="Error">!URLERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Site Title</div>
+		<div class="Input"><input class="Med Text" type="Text" name="site_title" value="!SITETITLE!" /><span class="Error">!SITETITLEERROR!</span></div>
+	</div>
+	<div class="Block Even">
+		<div class="Title">Site Description</div>
+		<div class="Input"><input class="Med Text" type="Text" name="site_desc" value="!SITEDESC!" /></div>
+	</div>
+</div>
+
+<div class="Right">
+	<div class="Block">
+		<div class="Title">Site Keywords</div>
+		<div class="Input"><input class="Med Text" type="Text" name="site_keywords" value="!SITEKEYWORDS!" /></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Template</div>
+		<div class="Input"><input class="Med Text" type="Text" name="template" value="!TEMPLATE!" /><span class="Error">!TEMPLATEERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Copyright Text</div>
+		<div class="Input"><input class="Med Text" type="Text" name="copyright" value="!COPYRIGHT!" /></div>
+	</div>
+	<div class="Block">
+		<div class="Title">SEO-friendly URLs are</div>
+		<div class="Input">!SEOBUTTON!</div>
+	</div>
+	<div class="Small left">Please note, switching SEO URLs will force system to clean up the cache</div>
+</div>
+
+<h3>Cache Settings</h3>
+<div class="Left" style="width:70%;">
+  	<div class="Block" style="padding-right:15px;">
+		<div class="Title">Cache is</div>
+		<div class="Input">!CACHEBUTTON!</div>
+	</div>
+  	<div class="Block" style="padding-right:15px;">
+		<div class="Title">Time to leave</div>
+		<div class="Input"><input class="Short Text" type="Text" name="cache_ttl" value="!CACHETTL!" /> seconds <span class="Error">!CACHETTLERROR!</span></div>
+	</div>
+  	<div class="Block" style="padding-right:15px;">
+		<div class="Title">&nbsp;</div>
+		<div class="Input left"><a class="Btn Off" href="index.php?action=clear_cache">Clear Cache</a></div>
+	</div>
+</div>
+
+
+
+<h3>Administration &amp; Contact </h3>
+<div class="Left">
+	<div class="Block">
+		<div class="Title">Admin Email</div>
+		<div class="Input"><input class="Med Text" type="Text" name="admin_email" value="!ADMINEMAIL!" /><span class="Error">!ADMINEMAILERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Contact Email</div>
+		<div class="Input"><input class="Med Text" type="Text" name="contact_email" value="!CONTACTEMAIL!" /><span class="Error">!EMAILERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Email Signature <a  class="Info" title="This text will be used as your signature in every email sent to your users/subscribers." href="#">(?)</a></div>
+		<div class="Input"><textarea class="Text Med" rows="4" name="signature">!MAILSIGNATURE!</textarea></div>
+	</div>
+</div>
+
+<div class="Right">
+	<div class="Block">
+		<div class="Title">Admin Login</div>
+		<div class="Input"><input class="Med Text" type="Text" name="admin" value="!ADMIN!" /><span class="Error">!ADMINERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Admin Password</div>
+		<div class="Input"><input class="Med Text" type="Password" name="password" value="" /><span class="Error">!PASSWORDERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Admin Password (Confirm)</div>
+		<div class="Input"><input class="Med Text" type="Password" name="password_copy" value="" /></div>
+	</div>
+</div>
+
+<div class="Divider"></div>
+<div class="Submit">
+	<input name="action" type="submit" value="Submit">
+</div>
+
+
+</form>
+
+
+!ADMINFOOTER!

@@ -1,0 +1,110 @@
+<script language="javascript" type="text/javascript">
+	function show( identifier )
+	{
+		var show = document.getElementById(identifier).show;
+		if( show == true )
+		{
+		   	document.getElementById(identifier).style.display="none"; 
+			document.getElementById(identifier).show = false;
+		}
+		else
+		{
+			document.getElementById(identifier).style.display="block"; 
+			document.getElementById(identifier).show = true;
+		}
+	}   
+</script>
+
+<form name="form1" method="post" action="index.php?step=1">
+<input name="submit" value="1" type="hidden">
+<p><strong>Welcome to the ProArcadeScript installation wizard!</strong></p>
+<p>This installation process was designed to be as easy as possible so that it will take an average of 2-5 minutes 
+to set up the ProArcadeScript. </p>
+<p>Need support? Have a question? <a href="http://www.proarcadescript.com">Click here</a>.</p>
+
+<p class="Error">!ERROR!</p>
+
+<h3>General Site Settings </h3>
+<table width="70%" border="0" cellspacing="7" cellpadding="0">
+<tr valign="top">
+	<td width="37%" align="left">Site Name </td>
+	<td width="60%" align="right">
+		<input name="sitename" type="text" value="!SITENAME!" size="45">
+		<div class="Hidden" id="hint_sitename">Type the name of your site here</div></td>
+	<td width="3%" align="right"><a href="javascript:show('hint_sitename');">???</a></td></tr>
+<tr valign="top">
+	<td align="left">Base Path</td>
+	<td align="right">
+		<input name="basepath" value="!BASEPATH!" type="text" size="45">
+		<div class="Hidden" id="hint_location">This is a path to the script on your site, keep "/" in case you istall it in the root folder<br/>(must end with "/" anyway).</div></td>
+	<td align="right"><a href="javascript:show('hint_location');">???</a></td></tr>
+</table>
+
+<h3>Database Settings</h3>
+<table width="70%" border="0" cellspacing="7" cellpadding="0">
+<tr valign="top">
+	<td width="37%" align="left">Database Name </td>
+	<td width="60%" align="right">
+		<input name="dbname" value="!DBNAME!" type="text" size="45">
+		<div class="Hidden" id="hint_dbname">Enter the name of the database you made for ProArcadeScript here</div></td>
+	<td width="3%" align="right"><a href="javascript:show('hint_dbname');">???</a></td></tr>
+<tr valign="top">
+	<td align="left">Database Username</td>
+	<td align="right">
+		<input name="dbuser" type="text" value="!DBUSER!" size="45">
+		<div class="Hidden" id="hint_dbuser">Enter the database user's name here<br>( Make sure it has access to the database you entered above )</div></td>
+	<td align="right"><a href="javascript:show('hint_dbuser');">???</a></td></tr>
+<tr valign="top">
+	<td align="left">Database Password </td>
+	<td align="right">
+		<input name="dbpass" type="text" value="!DBPASS!" size="45">
+		<div class="Hidden" id="hint_dbpass">Enter the password associated with the username entered above</div></td>
+	<td align="right"><a href="javascript:show('hint_dbpass');">???</a></td></tr>
+<tr valign="top">
+	<td align="left">Database Host</td>
+	<td align="right">
+		<input name="dbhost" type="text" value="!DBHOST!" size="45">
+		<div class="Hidden" id="hint_dbhost">This is the database servers host<br>(Usually it's localhost)</div></td>
+	<td align="right"><a href="javascript:show('hint_dbhost');">???</a></td></tr>
+<tr valign="top">
+	<td align="left">Table Prefix </td>
+	<td align="right">
+		<input name="tableprefix" type="text" value="!TABLEPREFIX!" size="45">
+		<div class="Hidden" id="hint_tableprefix">This is the database table prefix.<br>You can leave this blank, but if the database is used for other scripts, it'll be better to enter some prefix (such as arcade_)</div></td>
+	<td align="right"><a href="javascript:show('hint_tableprefix');">???</a></td></tr>
+</table>
+
+<h3>Administrator settings</h3>
+<table width="70%" border="0" cellspacing="7" cellpadding="0">
+<tr valign="top">
+	<td width="37%" align="left">Admin Username   </td>
+	<td width="60%" align="right">
+		<input name="adminname" value="!ADMINNAME!" type="text" size="45">
+		<div class="Hidden" id="hint_admin">Enter the username for the main administrator here.</div></td>
+	<td width="3%" align="right"><a href="javascript:show('hint_admin');">???</a></td></tr>
+<tr valign="top">
+	<td align="left">Admin Password </td>
+	<td align="right">
+		<input name="adminpass" type="password" value="!ADMINPASS!" size="45">
+		<div class="Hidden" id="hint_adminpass">Please choose a secure password for the administrator</div></td>
+	<td align="right"><a href="javascript:show('hint_adminpass');">???</a></td></tr>
+<tr valign="top">
+	<td align="left">Confirm Password </td>
+	<td align="right">
+		<input name="adminpass2" type="password" value="!ADMINPASS2!" size="45">
+		<div class="Hidden" id="hint_adminpass2">Verify the password entered above.</div></td>
+	<td align="right"><a href="javascript:show('hint_adminpass2');">???</a></td></tr>
+<tr valign="top">
+	<td align="left"> Admin E-mail </td>
+	<td align="right">
+		<input name="adminemail" type="text" value="!ADMINEMAIL!" size="45">
+		<div class="Hidden" id="hint_adminemail">Enter the admin E-mail here.</div></td>
+	<td align="right"><a href="javascript:show('hint_adminemail');">???</a></td></tr>
+<tr valign="top"><td height="0"></td><td></td><td></td></tr>
+<tr valign="top">
+	<td>&nbsp;</td>
+	<td align="right"><input type="submit" value="Install" style="padding:2px 15px 2px 15px;"></td>
+	<td align="right">&nbsp;</td></tr>
+</table>
+</form>
+

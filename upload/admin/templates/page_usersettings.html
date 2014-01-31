@@ -1,0 +1,70 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<form action="users.php" method="post">
+<h3>General Settings</h3>
+<div class="Left">
+	<input type="hidden" name="action" value="savesettings" />
+	<div class="Block">
+		<div class="Title"><b>All fields are mandatory</b><br /><br /></div>
+		<div class="Title">Min Pause between gameplays: <input class="Text Short" type="text" name="playpause" value="!PLAYPAUSE!" /> sec.</div>
+		<div class="Input"><span class="Error">!PLAYPAUSEERROR!</span> If time interval between 2 gameplays of one user is shorter, the second gameplay will not be counted to prevent rating frauds</div>
+	</div>
+	<div class="Block">
+		<div class="Title">Min Pause between comments: <input class="Text Short" type="text" name="commentpause" value="!COMMENTPAUSE!" /> sec.</div>
+		<div class="Input"><span class="Error">!COMMENTPAUSEERROR!</span> If time interval between 2 comments is shorter, the second one will add nothing to the user's rating.</div>
+	</div>
+	<div class="Block">
+		<div class="Title">Max Username: <input class="Text Short" type="text" name="maxname" value="!MAXNAME!" /> chars</div>
+		<div class="Input"><span class="Error">!MAXNAMEERROR!</span> The maximum length of a username</div>
+	</div>
+	<div class="Block">
+		<div class="Title">Users per Page: <input class="Text Short" type="text" name="perpage" value="!PERPAGE!" /></div>
+		<div class="Input"><span class="Error">!PERPAGEERROR!</span> Maximum number of users to be shown on a single page of the "Users" list inside user CP.
+			</div>
+	</div>
+	<div class="Block">
+		<div class="Title">Max Avatar: <input class="Text Short" type="text" name="awidth" value="!AWIDTH!" /> X <input class="Text Short" type="text" name="aheight" value="!AHEIGHT!" /> pixels</div>
+		<div class="Input"><span class="Error">!AWIDTHERROR! !AHEIGHTERROR!</span> Maximum avatar dimensions</div>
+	</div>
+	<div class="Block">
+		<div class="Title">Avatar Filesize: up to <input class="Text Short" type="text" name="afilesize" value="!AFILE!" /> bytes</div>
+		<div class="Input"><span class="Error">!AFILEERROR!</span> Maximum avatar filesize</div>
+	</div>
+</div>
+
+<div class="Right">
+	<div class="Block">
+		<div class="Title">&nbsp;<br /><br /></div>
+		<div class="Title">Keep unverified users in the database: <input class="Text Short" type="text" name="unverified" value="!UNVERIFIED!" /> days</div>
+		<div class="Input"><span class="Error">!UNVERIFIEDERROR!</span> Each user who has not virified his/her account during this time interval, will be deleted automatically</div>
+	</div>
+	<div class="Block">
+		<div class="Title">Add to the user rating... </div>
+		<div class="Input"><input class="Text Short" type="text" name="ptplay" value="!PTPLAY!" /> point(s) for each game played;
+			<span class="Error">!PTPLAYERROR!</span>
+		<br />
+		<input class="Text Short" type="text" name="ptcomment" value="!PTCOMMENT!" /> points for each comment;
+			<span class="Error">!PTCOMMENTERROR!</span>
+		<br />
+		<input class="Text Short" type="text" name="ptrating" value="!PTRATING!" /> points for each game rated;
+			<span class="Error">!PTRATINGERROR!</span>
+		<br />
+		<input class="Text Short" type="text" name="ptsubmit" value="!PTSUBMIT!" /> points for each game submitted.
+			<span class="Error">!PTSUBMITERROR!</span>
+		</div>
+	</div>
+	<div class="Block">
+	   <div class="Title">Reserved usernames (comma separated)</div>
+	   <div class="Input"><textarea rows="5" class="Text Med" name="forbidden">!FORBIDDEN!</textarea>
+	</div>
+</div>
+
+<div class="Divider"></div>
+<div class="Submit">
+	<input type="submit" value="Save settings">
+</div>
+</form>
+
+
+!ADMINFOOTER!

@@ -1,0 +1,17 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<ul class="List">
+	<li class="Caption"><span class="Cell W60">Category Title</span> <span class="Cell W20">Games</span> <span class="Cell W20">Actions</span></li>
+<!-- BEGIN DYNAMIC BLOCK: dynCatList -->	
+	<li><span class="Cell W60">!CATTITLE!</span> <span class="Cell W20">!GAMESNUMBER!</span> <span class="Cell W20"><div class="Btn Edit"><a  title="edit category settings" href="content.php?action=editcat&cat=!CATID!"><span class="Hide">Edit</span></a></div> <div class="Btn Delete"><a title="delete category" href="content.php?action=delcat&cat=!CATID!"><span class="Hide">Delete</span></a></div></span></li>
+<!-- END DYNAMIC BLOCK: dynCatList -->
+</ul>
+
+<h3>Utilities:</h3>
+<ul class="Submenu" style="text-align:left; padding-left:0; margin-left:0;">
+	<li><a href="content.php?action=revisecategories">Revise games number for each category</a></li>
+	<li><a href="content.php?action=moviesizes">Correct games' dimentions in the DB</a></li>
+</ul>
+
+!ADMINFOOTER!

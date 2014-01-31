@@ -1,0 +1,97 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<span class="Error">!ERROR!</span>
+
+<h3>!BLOCKID! Block settings:</h3>
+<div>
+	<form action="blocks.php" method="post">
+	<input type="Hidden" name="action" value="!ACTION!" />
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">ID<b>*</b> <a href="#" class="Info" title="An identifier which represents the block in html templates. MUST BE UNIQUE.">(?)</a></div>
+			<div>!IDSTATIC!<input value="!BLOCKID!" class="Text Med" type="!IDINPUT!" name="id" /> <span class="Error">!IDERROR!</span></div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Title<b>*</b> <a href="#" title="Enter something descriptive here" class="Info">(?)</a></div>
+			<div><input value="!BLOCKTITLE!" class="Text Med" type="text" name="title" /> <span class="Error">!TITLEERROR!</span></div>
+		</div>
+	</div>
+	
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Block Type <a href="#" class="Info" title="Choose 'Static' if this is a simple html block, and 'Script' if this is a custom coded php script which must be called to generate the block.">(?)</a> </div>
+			<div>
+				<input !STATICCHECKED! type="Radio" value="static" name="type" />Static &nbsp; &nbsp;
+				<input !SCRIPTCHECKED! type="Radio" value="script" name="type" />PHP Script  &nbsp; &nbsp;
+			</div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Max. Elements <a href="#" class="Info" title="Maximum number of games or other elements to show in the Leave empty if it doesn't matter for this block">(?)</a></div>
+			<div><input value="!MAX!" class="Text Short" type="text" name="max" /></div>
+		</div>
+	</div>
+
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Pages <a href="#" class="Info" title="Mark the pages where this block should be visible.">(?)</a></div>
+			<div>
+				<input name="front" !FRONTCHECKED! value="1" type="Checkbox"> Front &nbsp;
+				<input name="cat" !CATCHECKED! value="1" type="Checkbox"> Category &nbsp;
+				<input name="game" !GAMECHECKED! value="1" type="Checkbox"> Game &nbsp;
+				<input name="user" !USERCHECKED! value="1" type="Checkbox"> User &nbsp;
+				<input name="custom" !CUSTOMCHECKED! value="1" type="Checkbox"> Custom
+			</div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Sorting <a href="#" class="Info" title="Leave as is if it doesn't matter for this block">(?)</a></div>
+			<div>
+				<select name="sort" class="Text Med">
+<!-- BEGIN DYNAMIC BLOCK: dynList -->	
+				<option !SORTSELECTED! value="!SORTID!">!SORTTITLE!</option>
+<!-- END DYNAMIC BLOCK: dynList -->
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="Left">
+		<div class="Block">
+			<div class="Title" style="padding-top:10px;">File name<b>*</b> <a href="#" title="This is the file in which your block's code is stored. DON'T ENTER FILE EXTENTION HERE." class="Info">(?)</a></div>
+			<div><input value="!FILE!" class="Text Med" type="text" name="file" /> <span class="Error">!FILEERROR!</span></div>
+<!-- BEGIN DYNAMIC BLOCK: dynCodeLink -->		
+			<div  class="Title" style="padding-top:20px;"><a href="blocks.php?action=editcode&id=!BLOCKID!">Edit Code</a></div>
+<!-- END DYNAMIC BLOCK: dynCodeLink -->
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Comments</div>
+			<div><textarea class="Text Med" name="comments" rows="3">!COMMENTS!</textarea></div>
+		</div>
+	</div>
+
+<!-- BEGIN DYNAMIC BLOCK: dynCode -->		
+	<div class="Center">
+		<div class="Block">
+			<div class="Title">Code <a href="#" title="Enter html code here for your static block or PHP (please be careful!) - for dynamic block." class="Info">(?)</a></div>
+			<div><textarea class="Text Wide" name="code" rows="9">!CODE!</textarea><span class="Error">!CODEERROR!</span></div>
+		</div>
+	</div>
+<!-- END DYNAMIC BLOCK: dynCode -->
+	
+	<div class="Divider"></div>
+	<div class="Submit">
+		<input type="submit" value="Submit" />
+	</div>
+	</form>
+</div>
+
+
+!ADMINFOOTER!

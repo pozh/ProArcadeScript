@@ -1,0 +1,89 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<span class="Error">!ERROR!</span>
+<span class="Message">!MESSAGE!</span>
+<h3>Game settings:</h3>
+
+<div>
+	<form action="content.php" ENCTYPE="multipart/form-data" method="post">
+	<input type="Hidden" name="action" value="!ACTION!" />
+	<input type="Hidden" name="id" value="!GAMEID!" />
+	<input type="Hidden" name="referrer" value="!REFERRER!" />
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Title<b>*</b></div>
+			<div><input value="!GAMETITLE!" class="Text Med" type="text" name="title" /> <span class="Error">!TITLEERROR!</span></div>
+		</div>
+		<div class="Block">
+			<div class="Title">Latin Title (will be used in links)</div>
+			<div><input value="!GAMELATINTITLE!" class="Text Med" type="text" name="latintitle" /> <span class="Error">!LATINTITLEERROR!</span></div>
+		</div>
+		<div class="Block">
+			<div class="Title">Category<b>*</b></div>
+			<div>
+				<select name="cat" class="Text Med">
+<!-- BEGIN DYNAMIC BLOCK: dynCatList -->
+				<option !CATSELECTED! value="!CATID!">!CATTITLE!</option>
+<!-- END DYNAMIC BLOCK: dynCatList -->
+				</select>
+			</div>
+		</div>
+		<div class="Block">
+			<div class="Title">Description<b>*</b></div>
+			<div><textarea class="Text Med" rows="6" name="description">!GAMEDESC!</textarea> <span class="Error">!DESCERROR!</span></div>
+		</div>
+		<div class="Block">
+			<div class="Title">Keywords<b>*</b></div>
+			<div><textarea class="Text Med" rows="3" name="keywords">!GAMEKEYWORDS!</textarea> <span class="Error">!KEYWORDSERROR!</span></div>
+		</div>
+	</div>
+
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Upload Game File (!EXTENSIONS!)</div>
+			<div><input size=40 !DISABLEFILE! type="file" name="file" value="Browse"> <span class="Error">!FILEERROR!</span></div>
+		</div>
+		<div class="Block">
+			<div class="Title">Filename (uploaded) or URL/HTML (embedded game)</div>
+			<div><input value="!FILEPATH!" class="Text Med" type="text" name="filepath" /><span class="Small">Please start URL from 'http://' for embedded game.</span> <span class="Error">!FILEPATHERROR!</span></div>
+		</div>
+		<div class="Block">
+			<div class="Title">Upload Thumbnail ( .gif .jpg )<b>*</b></div>
+			<div><input size=40 !DISABLETHUMBNAIL! type="file" name="thumbnail" value="Browse"> <span class="Error">!THUMBERROR!</span></div>
+		</div>
+		<div class="Block">
+			<div class="Title">Upload Screenshot ( for the "Featured" page block, .gif .jpg )</div>
+			<div><input size=40 !DISABLESCREENSHOT! type="file" name="screenshot" value="Browse"> <span class="Error">!SSHOTERROR!</span></div>
+		</div>
+		<div class="Block">
+			<div class="Title">Dimensions (you can leave these fields empty for a flash game)</div>
+			<div>Width: <input value="!WIDTH!" class="Text Short" type="text" name="width" /> &nbsp; Height:<input value="!HEIGHT!" class="Text Short" type="text" name="height" /></div>
+		</div>
+		<div class="Block">
+			<div class="SingleLine" >
+				<input !ACTIVECHECKED! type="Checkbox" value="yes" name="active" />Active &nbsp; &nbsp;
+				<input !FEATUREDCHECKED! type="Checkbox" value="yes" name="featured" />Featured
+			</div>
+		</div>
+
+	</div>
+
+	<!-- BEGIN DYNAMIC BLOCK: dynStats -->
+	<h3>Game stats:</h3>
+   <p><b>Plays:</b> !PLAYS!; <b>Today:</b> !PLAYSTODAY! <a title="reset both counters" href="content.php?action=resetplays&id=!GAMEID!">[reset]</a><br />
+	<b>Votes:</b> !VOTES!; &nbsp;&nbsp; <b>Average rating:</b> !RATING!  <a title="reset values" href="content.php?action=resetvotes&id=!GAMEID!">[reset]</a></p>
+	<!-- END DYNAMIC BLOCK: dynStats -->
+
+	<div class="Divider"></div>
+	<div class="Submit">
+		<input type="submit" name="submit" value="   Submit   " />
+	</div>
+	</form>
+	<br class="clear" />
+	<p><i><b>NB:</b> <i>You can leave the <b>Latin Title</b> field empty if your site is in English or another <u>european</u> language.
+		The value of that field will be generated automatically out of the <b>Title</b></i></p>
+</div>
+
+
+!ADMINFOOTER!

@@ -1,0 +1,38 @@
+<h3>User Registration</h3>
+	<p>Please fill up the form below to create an account at !TITLE!. </p>
+	<form class="Form" action="!SITEROOT!user/register/" method="post">
+	<div class="Block">
+		<div class="Title">Desired username<b>*</b> (use a-Z,0-9,-,_)</span></div>
+		<div class="Input"><input value="!NAME!" class="Text" type="text" name="name" /><span class="Error">!NAMEERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">E-mail<b>*</b></div>
+		<div class="Input"><input value="!EMAIL!" class="Text" type="text" name="email" /><span class="Error">!EMAILERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Location (city)</div>
+		<div class="Input"><input value="!LOCATION!" class="Text" type="text" name="location" /></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Gender</div>
+		<div class="Input"><select class="Text" name="gender">
+			<option !GENDER0! value="0">Alien</option>
+			<option !GENDER1! value="1">Male</option>
+			<option !GENDER2! value="2">Female</option>
+		</select>
+		</div>
+	</div>
+	<div class="Block">
+		<div class="Title">Password<b>*</b> (use a-Z,0-9,-,_)</div>
+		<div class="Input"><input class="Text" type="Password" name="password" /><span class="Error">!PASSWORDERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Password (retype)<b>*</b></div>
+		<div class="Input"><input class="Text" type="Password" name="password2" /><span class="Error">!PASSWORD2ERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title"><input type="Checkbox" name="subscribe" value="1" !SUBSCRIBE! /> Yes, I want to receive site news</div>
+	</div>
+	<div class="Block"><input type="submit" name="submit" value="  Submit  " /></div>
+	</form>
+

@@ -1,0 +1,64 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<div>
+	<div class="Left">
+		<h3>Antispam Filters:</h3>
+		<div class="Block" style="width:100%;">
+			<div style="height:180px; overflow:auto; position:relative;">
+				<ul class="List" style=" margin-top:0; width:99%; height:auto; float:left;">
+					<li class="Caption" ><span class="Cell W50">Word or String</span> <span class="Cell W25">Entries</span> <span class="Cell">Actions</span> </li>
+<!-- BEGIN DYNAMIC BLOCK: dynFilters -->	
+					<li><span class="Cell W50">!STOPSTRING!</span> <span class="Cell W25">!STOPNUMBER!</span>
+						<span class="Cell"><div class="Btn Edit"><a href="comments.php?action=editfilter&id=!STOPID!"><span class="Hide">Edit</span></a></div> 
+						<div class="Btn !STOPSTATE!"><a href="comments.php?action=switchfilter&id=!STOPID!"><span class="Hide">!STATE!</span></a></div> 
+						<div class="Btn Delete"><a href="comments.php?action=delfilter&id=!STOPID!" title="Delete this filter instantly"><span class="Hide">Delete</span></a></div></span>
+					</li>
+<!-- END DYNAMIC BLOCK: dynFilters -->
+				</ul>
+			</div>
+		</div>
+
+		<h3>!FILTERCAPTION! Filter:</h3>
+		<div class="Block">
+			<form action="comments.php" method="post">
+			<input type="hidden" name="action" value="!FILTERACTION!" />
+			<input type="hidden" name="id" value="!FILTERID!" />
+			<div class="Title">Phrase and number of entries<b>*</b> <a href="#" class="Info" title="In case &lt;Entries&gt; or more such Phrases are found in the comment posted, this comment will be considered as spam and will not be added to the database.">(?)</a></div>
+			<div><input value="!EDITFILTER!" class="Text Med" style="width:280px;" type="text" name="newfilter" /> <input value="!FILTERNUM!" class="Text Short" type="text" name="newfilternum" /></div>
+			<div style="margin-top:5px; text-align:center;"><input type="submit" name="submit" value="      !FILTERCAPTION!      " /></div>
+			</form>
+		</div>
+	</div>
+
+	<div class="Right">
+		<h3>Banned IPs:</h3>
+		<div class="Block" style="width:100%;">
+			<div style="height:180px; overflow:auto; position:relative;">
+				<ul class="List" style=" margin-top:0; width:99%; height:auto; float:left;">
+					<li class="Caption" ><span class="Cell W60">IP</span> <span class="Cell">Actions</span> </li>
+<!-- BEGIN DYNAMIC BLOCK: dynIPs -->	
+					<li><span class="Cell W60">!IP!</span>
+						<span class="Cell"><div class="Btn Edit"><a href="comments.php?action=editban&ip=!IP!"><span class="Hide">Edit</span></a></div> 
+						<div class="Btn Delete"><a href="comments.php?action=unban&ip=!IP!" title="Unban this IP"><span class="Hide">Unban</span></a></div></span>
+					</li>
+<!-- END DYNAMIC BLOCK: dynIPs -->
+				</ul>
+			</div>
+		</div>
+
+		<h3>!IPCAPTION! IP:</h3>
+		<div class="Block">
+			<form action="comments.php" method="post">
+			<input type="hidden" name="action" value="!IPACTION!" />
+			<input type="hidden" name="oldip" value="!OLDIP!" />
+			<div class="Title">IP<b>*</b></div>
+			<div><input value="!EDITIP!" class="Text Med" type="text" name="banip" /></div>
+			<div style="margin-top:5px; text-align:center;"><input type="submit" name="submit" value="      !IPCAPTION!      " /></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+!ADMINFOOTER!

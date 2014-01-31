@@ -1,0 +1,42 @@
+!ADMINHEADER!
+<h2>Welcome to ProArcadeScript Administration Area</h2>
+
+<h3>Quick info about your arcade site</h3>
+<div class="Left">
+	<div class="Block">
+		<ul>
+			<li><b>Games in database:</b> !GAMES! (!INACTIVEGAMES!)</li>
+			<li><b>Gameplays:</b> !GAMEPLAYS!</li>
+			<li><b>Gameplays Today:</b> !TODAYPLAYS!</li>
+		</ul>
+	</div>
+</div>
+
+<div class="Right">
+	<div class="Block">
+		<ul>
+			<li><b>Users:</b> !USERS! !PENDINGUSERS!</li>
+			<li><b>New Today:</b> !TODAYUSERS!</li>
+		</ul>
+	</div>
+</div>
+
+<h3>Common Actions</h3>
+<ul class="Submenu" style="text-align:left; padding-left:0; margin-left:0;">
+	<li><a href="content.php">List Categories</a></li>
+	<li><a href="content.php?action=listgames">List Games</a></li>
+	<li><a href="content.php?action=addcat">Add Category</a></li>
+	<li><a href="content.php?action=addgame">Add Game</a></li>
+</ul>
+
+<h3>Utilities</h3>
+<ul class="Submenu" style="text-align:left; padding-left:0; margin-left:0;">
+	<li><a href="install.php">Install gamepack</a></li>
+	<li><a href="stats.php">Show Statistics</a></li>
+	<li><a href="index.php?action=clear_cache">Clear Cache</a></li>
+</ul>
+
+<h3>Other Info</h3>
+<p><b>ProArcadeScript version:</b> !SCRIPTVERSION!</p>
+
+!ADMINFOOTER!

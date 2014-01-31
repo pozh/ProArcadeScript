@@ -1,0 +1,48 @@
+!ADMINHEADER!
+
+<h2>!SITETITLE! - Manage News</h2>
+
+<h3>!FORMTITLE!</h3>
+<form action="news.php" method="post">
+<input type="Hidden" name="action" value="!ACTION!">
+<input type="Hidden" name="id" value="!EDITID!">
+<div class="Left">
+	<div class="Block">
+		<div class="Title">News Title <b>*</b></div>
+		<div><input value="!NEWSTITLE!" class="Text Med" type="text" name="title" /> <span class="Error">!TITLEERROR!</span></div>
+	</div>
+</div>
+<div class="Right">
+	<div class="Block">
+		<div class="SingleLine"><input !ACTIVECHECKED! type="Checkbox" value="1" name="active" /> Make it active</div>
+	</div>
+</div>
+<div class="Left">
+	<div class="Block">
+		<div class="Title">News Summary <a href="#" class="Info" title="Leave this field empty if you will publish the full texts in the 'News' block instead of their summaries. If this field is not empty, the news entry will have a 'Read more' link connected with the full news text.">(?)</a></div>
+		<div><textarea class="Text Med" rows="5" name="summary">!NEWSSUMMARY!</textarea></div>
+	</div>
+</div>
+<div class="Right">
+	<div class="Block">
+		<div class="Title">News Text <b>*</b></div>
+		<div><textarea class="Text Med" rows="5" name="text">!NEWSTEXT!</textarea> <span class="Error">!TEXTERROR!</span></div>
+	</div>
+</div>
+
+<div class="Divider"></div>
+<div class="Submit">
+	<input type="Submit" name="submit" value="     Submit     "style="float:right; padding:2px; margin-top:3px;" />
+</div>
+
+<h3>Existing News</h3>
+
+<ul class="List">
+	<li class="Caption"><span class="Cell W25">Date</span> <span class="Cell W60">News Title</span> <span class="Cell">Actions</span></li>
+<!-- BEGIN DYNAMIC BLOCK: dynList -->	
+	<li><span class="Cell W25">!DATE!</span> <span class="Cell W60">!TEXT!</span> 
+	<span class="Cell"><div class="Btn Edit"><a title="edit news" href="news.php?action=edit&id=!NEWSID!"><span class="Hide">Edit</span></a></div> <div class="Btn !STATE!" style="margin-left:9px;"><a title="!STATE! news" href="news.php?action=switchstate&id=!NEWSID!"><span class="Hide">!STATE!</span></a></div> <div class="Btn Delete" style="margin-left:9px;"><a title="delete news" href="news.php?action=delete&id=!NEWSID!"><span class="Hide">Delete</span></a></div></span></li>
+<!-- END DYNAMIC BLOCK: dynList -->
+</ul>
+
+!ADMINFOOTER!

@@ -1,0 +1,25 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<h3>Options</h3>
+<p>Before proceed please specify the category in which you want to move games from the category you are going to delete. 
+Then click "Delete" to confirm the deletion or "Cancel" to get back to the category list.</p>
+<form action="content.php" method="post">
+	<input type="hidden" name="action" value="dodelcat">
+	<input type="hidden" name="cat_to_delete" value="!CATTODELETE!">
+	<div class="Left">
+	<div class="Block">
+		<div class="Title">Move games to</div>
+		<div class="Input">
+			<select name="moveto" class="Text">
+			!CATEGORIES!
+			</select>
+		</div>
+	</div>
+	</div>
+	<div class="Divider"></div>
+	<div class="Submit">
+		<input type="submit" name="submit" value="Delete" /> &nbsp; <input type="submit" name="submit" value="Cancel" />
+	</div>
+</form>
+!ADMINFOOTER!

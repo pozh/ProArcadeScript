@@ -1,0 +1,73 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<h3>Existing Comments </h3>
+
+<ul class="Submenu Thin" style="text-align:left; padding:0; margin:0;">
+	<li class="!SUBALL!"><a href="comments.php?show=all&filter=!CURFILTER!&value=!CURVALUE!">Show All</a></li>
+	<li class="!SUBACTIVE!"><a href="comments.php?show=active&filter=!CURFILTER!&value=!CURVALUE!">Active Only</a></li>
+	<li class="!SUBINACTIVE!"><a href="comments.php?show=inactive&filter=!CURFILTER!&value=!CURVALUE!">Inactive Only</a></li>
+</ul>
+<form action="comments.php" method="post">
+<ul class="List">
+	<li class="Caption">
+		<span class="Cell W20">Game Title / Site</span>
+		<span class="Cell W30">Comment</span>
+		<span class="Cell W12">Date</span> 
+		<span class="Cell W12">User</span>
+		<span class="Cell W15">IP</span>
+		<span class="Cell">Actions</span>
+	</li>
+<!-- BEGIN DYNAMIC BLOCK: dynList -->	
+	<li>
+		<span class="Cell W20"><a href="comments.php?show=!CURSHOW!&filter=object&value=!LISTGAMEID!" title="Show all comments about !LISTWHAT!">!LISTWHAT!</a></span>
+		<span class="Cell W30">!LISTCOMMENT!</span>
+		<span class="Cell W12">!LISTDATE!</span> <span class="Cell W12"><a href="comments.php?show=!CURSHOW!&filter=user&value=!USERID!" title="Show all comments added by !LISTUSER!">!LISTUSER!</a></span> 
+		 <span class="Cell W15"><a href="comments.php?show=!CURSHOW!&filter=ip&value=!LISTIP!" title="Show all comments posted from !LISTIP!">!LISTIP!</a></span>
+		<span class="Cell"><div class="Btn Edit"><a title="edit comment" href="comments.php?show=!CURSHOW!&action=edit&id=!LISTID!"><span class="Hide">Edit</span></a></div> <div class="Btn !STATE!"><a title="!STATE! comment" href="comments.php?action=switchstate&id=!LISTID!"><span class="Hide">!STATE!</span></a></div>	<div class="Btn Delete"><a title="delete comment" href="comments.php?action=del&id=!LISTID!"><span class="Hide">Delete</span></a></div> &nbsp; <input type="checkbox" name="comment!LISTID!" value="!LISTID!" /></span>
+	</li>
+<!-- END DYNAMIC BLOCK: dynList -->
+</ul>
+<p class="tr"><br class="clear" /><br />
+	<input type="submit" name="action" value="Activate/Deactivate selected" />
+	<input type="submit" name="action" value="Delete selected" />
+</p>
+</form>
+
+<p class="Pages">
+<!-- BEGIN DYNAMIC BLOCK: dynPagesTitle -->	
+<b>Pages:</b>
+<!-- END DYNAMIC BLOCK: dynPagesTitle -->
+<!-- BEGIN DYNAMIC BLOCK: dynPages -->	
+<a href="comments.php?!PAGELINK!" class="!PAGEACTIVE!">!PAGE!</a> 
+<!-- END DYNAMIC BLOCK: dynPages -->
+<!-- BEGIN DYNAMIC BLOCK: dynPagesTitle -->	
+<!-- END DYNAMIC BLOCK: dynPagesTitle -->
+</p>
+
+<h3>Add/Edit Comment</h3>
+<form action="comments.php" method="post">
+<input type="Hidden" name="action" value="!ACTION!" />
+<input type="Hidden" name="id" value="!EDITID!" />
+<input type="Hidden" name="referrer" value="!REFERRER!" />
+
+<div class="Center">
+	<div class="Block">
+		<div class="Title">Comment<b>*</b></div>
+		<div><textarea class="Text Wide" name="comment" rows="4">!NEWCOMMENT!</textarea><span class="Error">!COMMENTERROR!</span></div>
+	</div>
+</div>
+<div class="Left">
+	<div class="Block">
+		<div class="Title">Game ID <a href="#" class="Info" title="Enter 0 to comment the site or game's ID (you can find it in the games' list) to comment that game.">(?)</a></div>
+		<div><input value="!GAMEID!" class="Text Short" type="text" name="gameid" /></div>
+	</div>
+</div>
+<div class="Right">
+	<div class="Block">
+		<input type="Submit" name="submit" value="       Submit       " style="float:right; padding:2px; margin-top:12px;" />
+	</div>
+</div>
+</form>
+
+!ADMINFOOTER!

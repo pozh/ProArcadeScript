@@ -1,0 +1,64 @@
+ProArcadeScript v1.6
+
+INSTALLATION
+
+I. THE SCRIPT 
+-------------------------------------------------------------------
+1. Unzip the package in an empty directory 
+
+2. Upload everything located in the "Upload" folder to your server. 
+
+3. Change files/folders attributes:
+
+   3a. In case PHP is running as an Apache Module or you are not sure 
+       how is it actually running:
+     - all folders in the "content" folder: 766
+     - all files in the "content/blocks" folder: 666
+     - folder "docs": 766, all html files in it: 666
+     - folder "include": 766
+     - in the "include" folder files comments_config.php, blocks_config.php 
+       pages_config.php and usersettings.php: 666
+     - in the template folders (Toys, etc.) all html files : 666
+
+   3b. If PHP is running as CGI:
+     - just make sure all folders have permission level 755 and all files - 644 
+       (those are default values in most ftp managers)
+
+
+4. Create a new mySQL database on your server (ask your hoster if 
+   you don't know how to do that), remember its name, username and 
+   password, you will need all that on the next step.
+
+5. Open www/yoursite.com/install/ in your browser and follow the 
+   instructions. 
+
+6. Once the installation process is done, remove the "install" 
+   folder from the server.
+
+On any error feel free to ask me for suport at PAS forum
+www.proarcadescript.com/forum or via email support@proarcadescript.com
+
+
+II. THE FIRST GAME PACK
+-------------------------------------------------------------------
+Once the script is installed, you should install the first 
+gamepack which can be downloaded from the customer area at 
+proarcadescript.com (see your login details in the message you have
+received right after ordering.
+Here is the simple 3-steps guide for pack's installation:
+
+1. Unzip and upload all games' files (images and SWFs) to the 
+   appropriate folders in the "content" folder on your server;
+2. Log-in to your administration control panel (www/yoursite.com/admin/),
+   click the "Install Gamepack" button and follow the instructions.
+
+
+-------------------------------------------------------------------
+- See information about the script and 
+  related products at: www.proarcadescript.com
+- User support forum: www.proarcadescript.com/forum/
+- Author's email: support@proarcadescript.com
+
+Copyright
+ProArcadeScript is released under the GNU Public License (GPL) v3 
+(see license.txt for details)

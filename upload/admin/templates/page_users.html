@@ -1,0 +1,62 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<h3>Find users</h3>
+<form action="!FINDACTION!" method="get">
+<input type="Hidden" name="action" value="list">
+<input type="Hidden" name="page" value="!FILTERPAGE!">
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Username (examples: user, %user)</div>
+			<div><input value="!FINDUSER!" class="Text Med" type="text" name="username" /></div>
+		</div>
+	</div>
+
+	<div class="Left">
+		<div class="Block">
+			<div class="Title" >
+				<input !INACTIVECHECKED! type="checkbox" value="1" name="inactive" />Unverified Only
+			</div>
+		</div>
+  <input class="right" type="submit" value="Search" />
+	</div>
+
+</form>
+
+<p class="Pages">
+<!-- BEGIN DYNAMIC BLOCK: dynPagesTop -->
+	<a href="users.php?action=list&!PAGELINK!" class="!PAGEACTIVE!">!PAGE!</a>
+<!-- END DYNAMIC BLOCK: dynPagesTop -->
+</p>
+
+<ul class="List">
+	<li class="Caption">
+		<span class="Cell W10 !SORTEDID!"><a href="users.php?action=list&sort=id&order=asc!ORDERLINK!">ID</a>  <a class="Desc" href="users.php?action=list&sort=id&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="users.php?action=list&sort=id&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W25 !SORTEDUSERNAME!"><a href="users.php?action=list&sort=username&order=asc!ORDERLINK!">Username</a> <a class="Desc" href="users.php?action=list&sort=username&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="users.php?action=list&sort=username&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W12 !SORTEDJOINED!"><a href="users.php?action=list&sort=joined&order=asc!ORDERLINK!">Joined</a> <a class="Desc" href="users.php?action=list&sort=joined&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="users.php?action=list&sort=joined&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W12 !SORTEDPLAYS!"><a href="users.php?action=list&sort=plays&order=asc!ORDERLINK!">Plays</a> <a class="Desc" href="users.php?action=list&sort=plays&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="users.php?action=list&sort=plays&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W12 !SORTEDRATING!"><a href="users.php?action=list&sort=rating&order=asc!ORDERLINK!">Rating</a> <a class="Desc" href="users.php?action=list&sort=rating&order=desc!ORDERLINK!"><span>+</span></a> <a class="Asc" href="users.php?action=list&sort=rating&order=asc!ORDERLINK!"><span>-</span></a></span>
+		<span class="Cell W12 !SORTEDCOMMENTS!"><a href="users.php?action=list&sort=comments&order=asc!ORDERLINK!">Comm-s</a> <a class="Desc" href="users.php?action=list&sort=comments&order=desc!ORDERLINK!"><span>-</span></a> <a class="Asc" href="users.php?action=list&sort=comments&order=asc!ORDERLINK!"><span>+</span></a></span>
+		<span class="Cell W15">Actions</span>
+	</li>
+<!-- BEGIN DYNAMIC BLOCK: dynList -->
+	<li>
+		<span class="Cell W10">!USERID!</span><span class="Cell W25">!USERNAME!</span>
+		<span class="Cell W12">!USERJOINED!</span><span class="Cell W12">!GAMEPLAYS!</span>
+		<span class="Cell W12">!RATING!</span><span class="Cell W12"><a href="comments.php?filter=user&value=!USERID!">!COMMENTS!</a></span>
+		<span class="Cell W15"><div class="Btn Edit"><a title="edit user" href="users.php?action=edit&id=!USERID!"><span class="Hide">Edit</span></a></div>
+   		<div class="Btn !STATE!"><a title="!STATE! user" href="users.php?action=switchstate&id=!USERID!"><span class="Hide">!STATE!</span></a></div>
+			<div class="Btn Delete"><a title="delete user" href="users.php?action=delete&id=!USERID!"><span class="Hide">Delete</span></a></div></span>
+	</li>
+<!-- END DYNAMIC BLOCK: dynList -->
+</ul>
+
+<p class="Pages">
+<!-- BEGIN DYNAMIC BLOCK: dynPages -->
+	<a href="users.php?action=list&!PAGELINK!" class="!PAGEACTIVE!">!PAGE!</a>
+<!-- END DYNAMIC BLOCK: dynPages -->
+</p>
+
+
+
+!ADMINFOOTER!

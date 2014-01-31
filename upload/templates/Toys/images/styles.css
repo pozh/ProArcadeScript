@@ -1,0 +1,226 @@
+/* STANDARD TAG REDEFINITIONS */
+BODY{ color: #1D1D1D; font-family: Arial, Helvetica, sans-serif;  margin: 9px 0 0 0; padding: 0;  background: #013205 url(bg_body.gif) repeat-x center top;  font-size: 12px;                  }
+* { margin: 0; padding: 0; }
+p { margin-bottom: 15px; line-height: 1.4em; margin-top: 0; }
+a{ color: #2A7612; }
+a:hover{ text-decoration: underline; color: #D20000; }
+h1, h2, h3, h4, h5{ margin: 0; padding: 0; font-weight: normal; }
+img{ border: none; }
+
+.Clear{ clear: both; font-size: 1px; height: 1px; line-height: 1px; overflow: hidden; }
+.Small{	font-size: 11px;}
+.Large{ font-size: 14px; }
+.floatleft{	float:left; }
+.floatright{ float: right; }
+.aligncenter{	text-align: center;}
+.alignleft{	text-align: left;}
+.alignright{ text-align: right; }
+.Aligned,
+.alignjustify{	text-align: justify;}
+.width100{	width:100%;}
+.debug{ border: 1px solid red; }
+
+#Root,
+#RootWide{ width: 940px; margin: 0 auto; }
+
+#Head{ float:left; width: 940px; height: 172px; position:relative;}
+	#Head .wrap{	position:absolute; left:190px; top:0; width: 572px; height: 172px; background: url(bg_header.gif) no-repeat; }
+	#RootWide #Head .wrap{ width: 750px; background: url(bg_header_wide.gif) no-repeat;  }
+	#Head ul{ display: block; height: 24px; width: 510px; margin-left: 10px; list-style: none; font-family: "MS Sans Serif", Geneva, sans-serif; font-weight: bold; }
+	#RootWide #Head ul{ width: 680px; }
+	#Head ul a{ color: #E8FC95; text-decoration: none; }
+	#Head ul a:hover{ color: white; }
+	#Head li{ float: left; display: block; padding: 7px 12px 0 12px;  background: url(bullet_mainnav.gif) no-repeat 0 9px;    }
+	#Head span{	display: none;}
+	#Head h1, #Head h1 a{ display:block; width: 288px; height: 108px; float:left; margin-top:10px; }
+
+#Content{ float:left; width:940px; position:relative; background: url(bg_center.gif) repeat-y 190px 0;  }
+#RootWide #Content{ background: url(bg_center_wide.gif) repeat-y 190px 0; }
+
+#Main{float:left; width: 508px; padding: 0 36px 20px 36px; }
+#RootWide #Main{ width: 686px;  }
+	#Main h2{ color: #FF850B; font-size: 20px; margin-bottom:5px;}
+	#Main p.Path{ margin: 0 0 15px 0; font-family: "MS Sans Serif", Geneva, sans-serif; font-size: 11px;  color: #FF5400;  }
+	#Main p.Path span{ color: #6F6F6F; }
+	#Main p.Path a{text-decoration: none; color: #333333; padding-right: 11px; margin-right: 1px;  background-image: url(ico_path.gif);  background-position: right;  background-repeat: no-repeat;    }
+	#Main p.Path a:hover{ color: #FF5400; border-bottom:none;	}
+
+	#Main .Featured{padding: 5px 0;  }
+	#Main .Featured h2{ font-size: 10px; float:left; width:275px; color: #6F8E1E;  text-transform: uppercase;  font-weight: bold;    }
+	#Main .Featured p{ float: left; width: 275px; color: #151515; }
+	#Main .Featured .Caption{	font-size: 10px;  margin-bottom:0;  	 }
+	#Main .Featured .Title{	font-size: 24px; margin-bottom: 5px;	}
+	#Main .Featured a{	color: #FF850B;	text-decoration: none; 	}
+	#Main .Featured div.Shot { position: relative;  float:right; display: block; font-size:8px; width: 210px; height: 135px; margin: 0 0px 3px 0;}
+	#Main .Featured img{ position:absolute; top: 5px; left: 5px; width: 200px; height: 125px; }
+	#Main .Featured .ShotMask { display: block; position: absolute; top: 0; left: 0; width: 210px; height: 135px; cursor: hand; }
+	#Main .Featured .ShotMask[class] { display:block; background: url(featured_frame.png) no-repeat;  }
+	
+ 	/* CATEGORY SECTION */
+	.Category{ margin-bottom:33px; }
+	.Category h2{ height:46px; display:block;  position: relative;   }
+	.Category h2 span.Start{ display: block; padding-left: 20px; height: 46px; position: absolute; left: -19px; background: url(bg_caption_left.gif) no-repeat left;  width: auto;  }
+	.Category h2 span.End{ line-height: 46px; display: block; float:left; font-size: 13px; font-weight:bold; color: white; padding-right: 15px; height: 46px; background: url(bg_caption_left_add.gif) no-repeat right;   }
+	.Category .AllGames{ text-align: right; float: right; position: relative; }
+	.Category .AllGames span{ display: block; position:absolute; right:-22px; padding-right: 20px; overflow: hidden; width:128px; height:46px; line-height: 46px;  background: url(bg_morelink.gif) no-repeat right; 	  }
+	.Category .AllGames a{ color: white; font-size: 12px; font-weight: bold; text-decoration: none; }
+
+	/* CENTER GAMES LIST */
+	#Main div.GamesRow{	float:left;	margin: 9px 0 0px 0;}
+	#Main div.GamesRow div.leftgame{ float: left; width: 254px; padding-bottom: 2px; }
+	#Main div.Thumb {  position: relative;  float:left; display: block; font-size:8px; width: 111px; height: 90px; margin:0 8px 3px 0;}
+	#Main img.Thumb{ position:absolute; top: 3px; left: 3px; width: 105px; height: 72px; }
+	#Main .mask {	display:block; position: absolute;  top: 0;  left: 0; width:111px; height:90px;  cursor: hand;  }
+	#Main .mask[class] {  background: url(game_frame.png) no-repeat;  }
+	#Main div.GamesRow .Title{ margin-bottom:4px; color: #F86401;  font-size: 13px;  font-weight: bold;  text-transform: uppercase;  font-family: Tahoma, Arial, Helvetica, sans-serif;  letter-spacing: -0.005em;               }
+	#Main div.GamesRow .Title a{ color: #F86401;  text-decoration: none;   }
+	#Main div.GamesRow .Desc{ font-family: "MS Sans Serif", Geneva, sans-serif; font-size: 11px; color: #9B9B9B; }
+	#Main div.GamesRow .leftgame .Desc{ padding-right: 10px; }
+
+	/* Rating on the front or category page */
+	#Main div.Rating{ width: 63px; height: 14px; position: absolute;  top:76px; left:5px; background-repeat: no-repeat;  }
+	#Main div.starna{ background-image: url(starna.gif); }
+	#Main div.star10{ background-image: url(star10.gif); }
+	#Main div.star15{ background-image: url(star15.gif); }
+	#Main div.star20{ background-image: url(star20.gif); }
+	#Main div.star25{ background-image: url(star25.gif); }
+	#Main div.star30{ background-image: url(star30.gif); }
+	#Main div.star35{ background-image: url(star35.gif); }
+	#Main div.star40{ background-image: url(star40.gif); }
+	#Main div.star45{ background-image: url(star45.gif); }
+	#Main div.star50{ background-image: url(star50.gif); }
+
+	/* GAME PAGE */
+	#star-rating{ background: url(star_rating.gif) repeat-x left -1000px; float:right; height:27px; width:80px;}
+		#star-rating a:hover,
+		#star-rating a:active,
+		#star-rating a:focus,
+		#star-rating .current-rating{ background: url(star_rating.gif) repeat-x left -1000px; }
+		#star-rating{ position: relative; width: 80px; height: 27px; overflow: hidden; list-style: none; margin: 0; padding: 0; background-position: left top; }
+		#star-rating li{ display: inline; line-height:27px; }
+		#star-rating a,
+		#star-rating .current-rating{ position: absolute; top: 0; left: 0; text-indent: -1000em; height: 27px; line-height: 27px; outline: none; overflow: hidden; border: none; }
+		#star-rating a:hover,
+		#star-rating a:active,
+		#star-rating a:focus{ background-position: left bottom; }
+		#star-rating a.one-star{ width: 20%; z-index: 6; }
+		#star-rating a.two-stars{ width: 40%; z-index: 5; }
+		#star-rating a.three-stars{ width: 60%; z-index: 4; }
+		#star-rating a.four-stars{ width: 80%; z-index: 3; }
+		#star-rating a.five-stars{ width: 100%; z-index: 2; }
+		#star-rating .current-rating{ z-index: 1; background-position: left center; }
+	
+	#Main .GameBG{ margin-bottom:20px; background-image: url(bg_gameblock_top.gif);  background-repeat: repeat-x; background-color: Black; float:left; width:685px; padding:15px 0 0 0;}
+	#Main .GameBGBox{ float:left;  width:655px; padding:0 15px 15px 15px; background-color: Black; background-image: url(bg_gameblock_bottom.gif);  background-repeat: repeat-x; background-position: bottom;  text-align:center;  color: White;    }
+
+	#Main h3{ color: #FF6600; font-size: 18px; margin-bottom: 15px; }
+	#Main h4{ color: #FF6600; font-size: 16px; margin-bottom: 15px; }
+	#Main .Col50{ width: 48%;}
+	#Main .Comments{ width: 100%; float: left; padding: 0; }
+	#Main p.Comment{ color: #565656; margin: 0; font-size: 10pt; text-align: justify;  background: url(bg_comment_entry.gif) no-repeat 0 4px;  padding-left: 20px;      }
+	#Main p.Signature{ margin: 9px 0 3em 0; text-align: right; font-size: 9pt; color: #F6A244;     }	
+	#Main .AddComment{ float:right; width: 255px }
+	#Main .AddComment{ font-size: 9pt; }
+	#Main .AddComment span{ display: block; }
+	#Main .AddComment .Button{font-size:11px; line-height: 20px; width: 85px; height: 25px; padding: 0; border:none; background-image: url(btn_medium.gif);  background-repeat: no-repeat;  background-color: #FFE9A8;  color: #E53838;  font-weight: bold;  float:right;  }
+
+	/* Form styles */
+	#Main Form{ margin: 0 0 1em 0; width:100% }
+	#Main Form.Form{ }
+	#Main div.Block{ padding:0 0 10px 0;  }
+	#Main .Block .Title{ font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; font-size: 0.85em; font-weight: bold;  color: Black; 	}
+	#Main .Block .Title b{ color: #FB0000;  margin-left: 0.3em;  }
+	#Main .Error{ display: block; font-size:0.85em; 	font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; color: Red; font-weight: bold; }
+	#Main .Message{ display: block; font-size: 1.2em; 	font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; color: #1E48C1; font-weight: normal;  text-align: center;  }
+	#Main input.Text{ width: 278px; height: 18px; background-color: white; border: 1px solid #6e8886; color: #343434;  padding: 2px;  }
+	#Main textarea{ width: 255px; height: 70px; background-color: #FFFEF9; border: 1px solid #F7C993; color: #8E4826; overflow: auto; }
+
+	.related{ float:left; width: 340px;  }	
+		.related .Desc{ display: block; padding-right: 20px; height: 90px; overflow: hidden; }
+	
+	/* User page */
+	.pagemenu{ text-align: right; }
+	.pagemenu li{ list-style: none; display: inline; margin:0 10px 0 0; }	
+	.pagemenu a{ color: #333333; text-decoration: none;}
+	.pages{	clear:both; display:block; text-align:center; padding:15px 0 0 0;	}
+	.pages a{ color: black; padding: 0 5px 0 5px; margin:0; text-decoration: none; }
+	.pages a.active{ background-color: #D50000;  color: White;}
+	.pages a:hover{ background-color: #F70000;  text-decoration: none; color: White;  }
+
+	
+div.Side	{ width: 180px; }
+	.Left{ float: left; position:relative; top:-100px; margin-bottom:-90px; }
+	.Right{ float:right; position:relative; top:-100px; margin-bottom:-90px; }
+	
+	.Side .Box{ width: 160px; float: left; padding: 10px 10px 0 10px; background-color: #FFFFE0; }
+	.Side div.Comments{ background-image: url(bg_inbox.gif); background-repeat: repeat-y; }
+	.Side div.CommentsFooter{ float: left; width:180px; height:12px;		background-image: url(bg_inbox_footer.gif);}
+	.Left .BoxFooter{ width: 180px; float: left;  height:10px; background: url(bg_box_left.gif) no-repeat;   }
+	.Right .BoxFooter{ width: 180px; float: left; height:10px; background: url(bg_box_right.gif) no-repeat; }
+	
+	.Side .SolidBox{ width:160px; float: left; padding:0px 10px 10px 10px;  background-repeat: no-repeat;  background-color: #71ba23; 	  }
+	.Side .SolidBox a{ color: #ffffe0; }	
+	.Side .SolidBox a:hover{ color: white; }
+	.Left .SolidBox{ background-position: left bottom; background-image: url(bg_side_box_b_l.gif); }
+	.Right .SolidBox{ background-position: right bottom; background-image: url(bg_side_box_b_r.gif); }
+	.Side div.Special{ background-color: #ED8308; 	  }
+	.Left div.Special{ 	background-image: url(bg_side_box_b_l_spec.gif);  }
+	.Right div.Special{	background-image: url(bg_side_box_b_r_spec.gif);   }
+	
+	.Side h2{ float:left; margin: 10px 0 0 0; padding: 9px 0 6px 10px; display: block; width: 170px; height: 25px; color: white;  background-image: url(bg_side_caption.gif); background-repeat: no-repeat; font-size: 11px; font-weight: bold; text-transform: uppercase; overflow: hidden;  font-family: Tahoma, Arial, Helvetica, sans-serif;  letter-spacing: 2px;   }
+	.Side h2.Special{ background-image: url(bg_side_caption_special.gif); }
+	.Side h2.Solid{ height:32px; line-height:32px; padding: 0 0 0 10px; background-image: url(bg_side_box.gif); 	}
+	.Side h2.SolidSpecial{ height:32px; line-height:32px; padding: 0 0 0 10px; background-image: url(bg_side_box_special.gif); 	}
+	
+	.Side ul{ list-style: none; margin-bottom:10px;}
+	.Side li{ margin:0 0 3px 0;}
+	.Side ul.Nav{ font-size: 12px;  display: block; margin-bottom:0; float:left; width:160px;	}
+	.Side ul.Nav li{ margin: 0 0 7px 0; padding: 0; float: left; height: 24px; width: 160px; overflow: hidden; background: url(bg_nav.gif) no-repeat; }
+	.Side ul.Nav a{ display:block; padding: 5px 0 0 20px; float: left; height: 19px; width: 140px; text-decoration: none; color: White; font-size: 12px; font-weight: bold; }
+	.Side ul.Nav a:hover{ padding: 5px 0 0 21px; width: 139px; }
+	
+	.Side .SearchBox{ background-image: url(bg_side_textbox_spec.gif); background-repeat: no-repeat; border: 0 none;  width: 154px;  height: 19px; line-height: 17px; padding: 2px 0 0 5px;  margin: 0;     }
+	.Side .BtnGo{ background-image: url(btn_go.gif); width:39px; height:18px; border:none;  background-color: #9DCF54;  color: White;  font-size: 11px;  float: right;  margin-top: 6px;         }
+	.Side .Special .BtnGo{ background-image: url(btn_go_spec.gif);  background-color: #F19C39;  }
+	
+	.Side .Combo select{	width:159px; }
+	.Side .Combo form{ padding-bottom:9px;}
+	
+	.Side .News{  }
+	.Side .News li{margin-bottom:7px;}
+	.Side .News .Title{ font-size: 11px; display: block; display: block; font-weight: bold; }
+	.Side .News .Date{ font-weight: normal; }
+	.Side .News .More{ display:block; font-size: 10px; width:100%; text-align: right; font-weight: bold;  }
+	
+	/* Feedback form and comments */
+	#feedbackread{ display: block; }	
+	#feedbackpost{ display: none; }
+	#feedbacknav_in{	position:absolute; left:0; top:0; width:160px; height:23px; background-image: url(inbox_post.gif);	background-repeat: no-repeat;  display: none; }
+	#feedbacknav_out{	position:relative; width:160px; height:23px; background-image: url(inbox_read.gif);	background-repeat: no-repeat;}
+		#feedbacknav_out a{ position: absolute; top:5px; font-weight:bold; text-decoration: none; display:block; color: #E53838;  }
+		#feedbacknav_out a.Read{ left:25px; }
+		#feedbacknav_out a.Post{ left:105px; }
+		#feedbacknav_out a:hover{ color: Maroon; }
+	#feedbackread{padding:10px 3px 0 3px;  }
+		#feedbackread p{ background: url(ico_comments.gif) no-repeat 0 1em;  padding: 8px 4px 0 16px;  color: #614E27;   }
+		#feedbackread .User{ text-align:right; display:block; font-style: normal; font-size:11px; padding-left:15px; }
+	#feedbackpost{ padding: 10px 0px 0 0px; }
+	#feedbackpost textarea{ border: 1px solid #FFE2B3;  overflow: auto; width: 152px; padding:3px;  }
+	#feedbackpost input.Button{ font-size:11px; line-height: 15px; width: 65px; height: 20px; padding: 0; border:none; background-image: url(btn_side_short.gif);  background-repeat: no-repeat;  background-color: #FFE9A8;  color: #E53838;  font-weight: bold;     }
+
+	/* Favorites */
+	.RemoveFavorite{ color: #C90404;  text-decoration: none;  font-family: "Arial Black", Arial, Helvetica, sans-serif; position:relative; top:-3px;}
+	
+	/* Blocks */
+	.center_block{ }
+	.center_block h3{ float: left; }
+	#WHOLIKESGAME{ float: left; width: 48%; }
+	#PUBLISH{ float: right; width: 50%; }
+		#PUBLISH .code{ display: block; width: 95%; height: 100px; font-size: 11px; background: #fafafa; border: 1px solid #cccccc; padding: 3px; overflow: hidden; }
+
+#Footer{	float:left; width: 940px; height: 150px;   position:relative;  }
+	#Footer .wrap{ position: absolute; left:171px; width: 565px; height: 100px;  color: #7B9D22; text-align:right; padding:50px 14px 0 0; background: url(bg_footer.gif) no-repeat;  font-size: 11px;    }
+	#RootWide #Footer .wrap{ width: 743px; height: 100px;  background: url(bg_footer_wide.gif) no-repeat;   }
+	#Footer a{ text-decoration: none; color:#7B9D22; }
+	#Footer a:hover{color: #B1DB44; 	}
+	#Footer p{ margin: 0 0 4px 0; line-height: 1.2em; }

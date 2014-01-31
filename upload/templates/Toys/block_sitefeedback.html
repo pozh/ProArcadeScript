@@ -1,0 +1,29 @@
+<h2>Feedback</h2>
+<div class="Box">
+
+<div id="feedbacknav_out"><div id="feedbacknav_in"></div>
+	<a class="Read" href="javascript:switchto('read');">Read</a>
+	<a class="Post" href="javascript:switchto('post');">Post</a>
+</div>
+<div id="feedbackread">
+<!-- BEGIN DYNAMIC BLOCK: dynSiteFeedback -->	
+	<p>!SITEFEEDBACK! <span class="User">!SITEFEEDBACKUSER!, !SITEFEEDBACKDATE!</span></p>
+<!-- END DYNAMIC BLOCK: dynSiteFeedback -->
+
+<!-- BEGIN DYNAMIC BLOCK: dynSiteFeedbackEmpty -->	
+	<p>There are no comments here yet. Be the first poster!</p>
+<!-- END DYNAMIC BLOCK: dynSiteFeedbackEmpty -->
+</div>
+<div id="feedbackpost">
+	<span class="Small">Your comment:</span>	<br />
+	<form method="post" action="!SITEROOT!comment.php">
+		<p style="display:none;"><input type="text" name="email" />
+			<input type="hidden" name="timer" value="!SITEFEEDBACKTIMER!" /></p>
+		<p><textarea name="comment" cols="16" rows="5"></textarea></p>
+		<p><input type="checkbox" name="private" value="1" /><span class="Small">&nbsp;Send to the siteowner only</span> </p>
+		<p><input type="submit"  value="Submit" class="Button floatright" /></p>
+	</form>
+</div>
+
+</div>
+<div class="BoxFooter"></div>

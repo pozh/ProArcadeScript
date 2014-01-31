@@ -1,0 +1,24 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<span class="Error">!ERROR!</span>
+
+<div>
+	<form action="!ACTION!" method="post">
+	<input type="Hidden" name="action" value="doeditcode" />
+	<input type="Hidden" name="id" value="!BLOCKID!" />
+	<div class="Center">
+		<div class="Block">
+			<div class="Title">Code<b>*</b> <a href="#" class="Info" title="!CODEHINT!">(?)</a></div>
+			<div><textarea class="Text Wide" name="code" rows="18">!CODE!</textarea><span class="Error">!CODEERROR!</span></div>
+		</div>
+	</div>
+	<div class="Divider"></div>
+	<div class="Submit">
+		<input type="submit" value="Submit" />
+	</div>
+	</form>
+</div>
+
+
+!ADMINFOOTER!

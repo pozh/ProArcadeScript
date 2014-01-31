@@ -1,0 +1,73 @@
+ProArcadeScript Version History
+
+Version 1.6
+- PHP 5.3 compatibility issue fixed
+
+
+Version 1.5
+- Mochi feed reader added
+- Several minor bugs fixed
+- Several minor improvements in admin CP
+- Users should now log in with their usernames, not emails 
+- Pagination added in the main game lists
+
+
+Version 1.4
+-----------------------------
+- Several bugs are fixed
+- Caching system added
+
+
+Version 1.3.2
+-----------------------------
+- Few minor bugs are fixed
+
+
+Version 1.3.1
+-----------------------------
+- .DCR can now be published on your gaming portal;
+- linked (embedded) games publishing (i.e. those you don't host on your site; 
+  instead of uploading a game you just post a URL to its swf/dcr file or HTML 
+  code provided by the author of the game);
+- rating system (5-star) is now AJAX-based;
+- block "Related games";
+- block "Random game";
+- block "Publish game on a blog/website";
+- block "Who likes this game";
+- block "Top Users";
+- user CP is added and supports/operates the following:
+  * avatars
+  * list of users
+  * list friends
+  * list of fans (people who have added the user to their friends)
+  * better list of favorites
+  * better login interface including "forgot password" system
+  * way better user registration system;
+- user rating tracking (rating depends on the number of gameplays, 
+  comments and other parameters);
+- improved user administration interface inside admin's CP, which allows admin to:
+  * add users
+  * delete users
+  * edit any user
+  * change global user-related settings (like max avatar size, number of days 
+    an inactive user's record stays in the database, etc.);
+- improved searching module which now searches in titles as well
+- way better multilingual abilities (each game and category now have 
+  2 separate fields in the database - title and latin_title. The 2nd one is for 
+  SEO-friendly URLs only, while the first one can be in any language);
+- improved comments administration - you can now bulk delete, activate/deactivate them
+- custom pages can now be dynamic (PHP)
+
+
+
+Version 1.2
+-----------------------------
+- Few minor bugs are fixed in both frontend and backend;
+- Vitalize games (.CCN extension) support
+- Better and more stable installation script
+
+
+
+Version 1.1
+-----------------------------
+The first public release

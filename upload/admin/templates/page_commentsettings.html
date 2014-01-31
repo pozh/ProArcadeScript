@@ -1,0 +1,79 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<div>
+	<form action="comments.php" method="post">
+	<h3>General settings:</h3>
+	<div class="Left">
+		<input type="Hidden" name="action" value="!ACTION!">
+
+		<div class="Block">
+			<div class="Title">Who can comment games</div>
+			<div>
+				<select name="gamecomments" class="Text Med">
+					<option !GAMECOM2! value="2">Anyone</option>
+					<option !GAMECOM1! value="1">Registered users only</option>
+					<option !GAMECOM0! value="0">Nobody</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="Block">
+			<div class="Title">Game comments' premoderation</div>
+			<div>
+				<select name="gamepremod" class="Text Med">
+					<option !GAMEPREMOD2! value="2">Premoderate all comments</option>
+					<option !GAMEPREMOD1! value="1">Premoderate anonimous posts only</option>
+					<option !GAMEPREMOD0! value="0">Do not premoderate comments</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="Block" style="width:100%;">
+			<div class="Title">Min. delay <a href="#" class="Info" title="Seconds. This is the minimum time interval between page load and first permissible comment. Very effective in preventing spambots' posting. Set to 0 if you don't need this filter.  ">(?)</a></div>
+			<div><input value="!DELAY!" class="Text Short" type="text" name="delay" /></div>
+		</div>
+		
+	</div>
+
+	<div class="Right">
+		
+		<div class="Block">
+			<div class="Title">Who can comment site (Site Feedback)</div>
+			<div>
+				<select name="sitecomments" class="Text Med">
+					<option !SITECOM2! value="2">Anyone</option>
+					<option !SITECOM1! value="1">Registered users only</option>
+					<option !SITECOM0! value="0">Nobody</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="Block">
+			<div class="Title">Site comments' premoderation</div>
+			<div>
+				<select name="sitepremod" class="Text Med">
+					<option !SITEPREMOD2! value="2">Premoderate all comments</option>
+					<option !SITEPREMOD1! value="1">Premoderate anonimous posts only</option>
+					<option !SITEPREMOD0! value="0">Do not premoderate comments</option>
+				</select>
+			</div>
+		</div>
+
+		<h3>Additional Options:</h3>
+		<div class="Block">
+			<div class="Title" style="margin-left:-4px;"><input !FILTERCHECKED! type="Checkbox" value="1" name="bfilters" /> Spam filters (Stop Words) are ON</div>
+			<div class="Title" style="margin-left:-4px;"><input !BANCHECKED! type="Checkbox" value="1" name="bban" /> Banning system (by IP) is ON</div>
+			<div class="Title" style="margin-left:-4px;"><input !DELETECHECKED! type="Checkbox" value="1" name="bdelete" /> Delete comments instantly (Without confirmation dialog)</div>
+			<div class="Title" style="margin-left:-4px;"><input !SENDCOPYCHECKED! type="Checkbox" value="1" name="bsendcopy" /> Email a copy of each comment to the site's admin. </div>
+		</div>
+		
+	</div>
+
+	<div class="Divider"></div>
+		<div class="Submit"><input type="submit" name="submit" value="Submit Changes" /></div>
+</form>
+</div>
+
+
+!ADMINFOOTER!

@@ -1,0 +1,80 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<p>Please fill up the form below to create a new user account or edit an existing one. <br />
+<span class="Error">!ERROR!</span></p>
+
+<form action="users.php" method="post">
+	<div class="Left">
+		<div class="Block">
+		   <input type="hidden" name="action" value="!ACTION!" />
+			<input type="hidden" name="id" value="!USERID!" />
+			<input type="hidden" name="referrer" value="!REFERRER!" />
+			<div class="Title">Username<b>*</b> (use a-Z,0-9,-,_)</span></div>
+			<div class="Input"><input value="!NAME!" class="Text Med" type="text" name="name" /><span class="Error">!NAMEERROR!</span></div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Password<b>*</b> (use a-Z,0-9,-,_)</div>
+			<div class="Input"><input class="Text Med" type="Password" name="password" /><span class="Error">!PASSWORDERROR!</span></div>
+		</div>
+	</div>
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">E-mail<b>*</b></div>
+			<div class="Input"><input value="!EMAIL!" class="Text Med" type="text" name="email" /><span class="Error">!EMAILERROR!</span></div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Password (retype)<b>*</b></div>
+			<div class="Input"><input class="Text Med" type="Password" name="password2" /><span class="Error">!PASSWORD2ERROR!</span></div>
+		</div>
+	</div>
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Location (city)</div>
+			<div class="Input"><input value="!LOCATION!" class="Text Med" type="text" name="location" /></div>
+		</div>
+ 	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title"><br />
+				<input type="Checkbox" name="subscribe" value="1" !SUBSCRIBE! /> Subscribe to site news<br /><br />
+				<input type="Checkbox" name="active" value="1" !ACTIVE! /> User active
+			</div>
+			<div class="Small"><br />
+				<b>NB.</b> The inactive (i.e. unverified users) are stored in the database for !DAYSINACTIVE! days only.
+				After that time they'll be automatically deleted.
+			</div>
+		</div>
+	</div>
+	<div class="Left">
+		<div class="Block" style="margin-right:20px;">
+			<div class="Title">Gender</div>
+			<div class="Input"><select class="Text" name="gender">
+				<option !GENDER0! value="0">Alien</option>
+				<option !GENDER1! value="1">Male</option>
+				<option !GENDER2! value="2">Female</option>
+			</select></div>
+		</div>
+		<div class="Block" style="margin-right:20px;">
+			<div class="Title">Gameplays</div>
+			<div class="Input"><input type="text" class="Text Short" name="gameplays" value="!GAMEPLAYS!" /></div>
+		</div>
+		<div class="Block">
+			<div class="Title">Rating</div>
+			<div class="Input"><input type="text" class="Text Short" name="rating" value="!RATING!" /></div>
+		</div>
+	</div>
+	<div class="Left Small">
+	   <b>NB.</b> See how gameplays affect on user's rating in <a href="users.php?action=settings">Settings</a>.
+	</div>
+	<div class="Divider"></div>
+	<div class="Submit">
+		<input type="submit" name="submit" value="   Submit   " />
+	</div>
+	</form>
+	
+!ADMINFOOTER!

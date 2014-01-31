@@ -1,0 +1,76 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<span class="Error">!ERROR!</span>
+
+<h3>Page settings:</h3>
+<div>
+	<form action="pages.php" method="post">
+	<input type="Hidden" name="action" value="!ACTION!" />
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Page filename (including extention - html or php) <b>*</b> <a href="#" class="Info" title="Filename must be UNIQUE. No php is allowed inside .html files.">(?)</a></div>
+			<div>!IDSTATIC!<input value="!PAGEID!" class="Text Med" type="!IDINPUT!" name="id" /> <span class="Error">!IDERROR!</span></div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Meta Title<b>*</b></div>
+			<div><input value="!PAGETITLE!" class="Text Med" type="text" name="title" /> <span class="Error">!TITLEERROR!</span></div>
+		</div>
+	</div>
+
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Menu Item  Title<b>*</b>  <a href="#" title="Name of the link in the main and/or footer menu." class="Info">(?)</a></div>
+			<div><input value="!MENUTITLE!" class="Text Med" type="text" name="menutitle" /> <span class="Error">!MENUTITLEERROR!</span></div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Link to this page must exist in the...</div>
+			<div><input !MAINCHECKED! type="Checkbox" value="1" name="mainmenu" />Main menu &nbsp; &nbsp; <input !FOOTERCHECKED! type="Checkbox" value="1" name="footermenu" />Footer menu &nbsp; &nbsp;</div>
+		</div>
+	</div>
+
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Meta Description</div>
+			<div><input value="!PAGEDESC!" class="Text Med" type="text" name="description" /></div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Meta Keywords</div>
+			<div><input value="!PAGEKEYWORDS!" class="Text Med" type="text" name="keywords" /></div>
+		</div>
+	</div>
+
+	<div class="Left">
+		<div class="Block">
+			<div class="SingleLine" ><input !ACTIVECHECKED! type="Checkbox" value="yes" name="active" />Page is active </div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Comments</div>
+			<div><textarea class="Text Med" name="comments" rows="3">!COMMENTS!</textarea></div>
+		</div>
+	</div>
+	
+	<div class="Center">
+		<div class="Block">
+			<div class="Title">Code <a href="#" title="Enter html code for your page here." class="Info">(?)</a></div>
+			<div><textarea class="Text Wide"name="code" rows="9">!CODE!</textarea><span class="Error">!CODEERROR!</span></div>
+		</div>
+	</div>
+	
+	<div class="Divider"></div>
+	<div class="Submit">
+		<input type="submit" value="Submit" />
+	</div>
+	</form>
+</div>
+
+
+!ADMINFOOTER!

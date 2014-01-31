@@ -1,0 +1,68 @@
+<div id="Settings">
+<h3>Modify Profile Settings</h3>
+
+<script language="JavaScript" type="text/JavaScript">
+   function show()
+	{
+		checker = document.getElementById("chPassword");
+		document.getElementById( "Password" ).style.display = (checker.checked) ? "block" : "none";
+		
+	}
+</script>
+
+<form class="Form" action="!SITEROOT!user/!USER_NAME!/settings.html" method="post">
+<div class="floatleft"  style="width:220px;">
+	<div class="Block">
+	   <input type="hidden" name="action" value="save" />
+		<div class="Title">E-mail</div>
+		<div class="Input"><input value="!EMAIL!" class="Text" type="text" name="email" /><span class="Error">!EMAILERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Location (city)</div>
+		<div class="Input"><input value="!LOCATION!" class="Text" type="text" name="location" /></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Gender</div>
+		<div class="Input"><select class="Text" name="gender">
+			<option !GENDER0! value="0">Alien</option>
+			<option !GENDER1! value="1">Male</option>
+			<option !GENDER2! value="2">Female</option>
+		</select>
+		</div>
+	</div>
+	<div class="Block">
+		<div class="Title"><input type="checkbox" id="chPassword" onClick="javascript:show();" name="changepassword" value="1" /> <label for="chPassword">Change password</label> </div>
+	</div>
+	<div id="Password">
+		<div class="Block">
+			<div class="Title">Password (use a-Z,0-9,-,_)</div>
+			<div class="Input"><input class="Text" id="chPassword" type="Password" name="password" /><span class="Error">!PASSWORDERROR!</span></div>
+		</div>
+		<div class="Block">
+			<div class="Title">Password (retype)</div>
+			<div class="Input"><input class="Text" type="Password" name="password2" /><span class="Error">!PASSWORD2ERROR!</span></div>
+		</div>
+	</div>
+	<div class="Block">
+		<div class="Title"><input type="Checkbox" id="chSubscribe" name="subscribe" value="1" !SUBSCRIBE! /> <label for="chSubscribe">Yes, I want to receive site news</label></div>
+	</div>
+	<div class="Block"><input type="submit" name="submit" value="  Submit  " /></div>
+</div>
+<div class="floatright"  style="width:240px; padding:50px 0 0 0;">
+<p class="Large vivid aligncenter"><b>!RESULTS!</b></p>
+<p class="Small vivid aligncenter"><b>!RESULTSNB!</b></p>
+</div>
+
+</form>
+
+<h3>Change Avatar</h3>
+<form id="Avatar" class="Form" action="!SITEROOT!user/!USER_NAME!/settings.html" method="post" enctype="multipart/form-data">
+	<img src="!SITEROOT!content/avatars/!USER_AVATAR!" alt="!USER_NAME!" />
+	<p class="aligncenter"><br /><b>Upload new:</b>&nbsp; <input type="file" name="avatar"  /> <input type="submit" value="Submit" />
+		<input type="hidden" name="action" value="upload" /></p>
+	<p class="Small aligncenter">The image must be in GIF, JPG or PNG format.<br />
+	Max filesize: !AVATAR_MAXSIZE!Kb.&nbsp; Max image dimensions are !AVATAR_MAXW!x!AVATAR_MAXH! pixels.<br />
+	<b class="vivid">Please note:</b> <b>New avatar will replace the current one.</b><br />
+	<b class="vivid Large">!AVATARRESULT!</b></p>
+</form>
+</div>

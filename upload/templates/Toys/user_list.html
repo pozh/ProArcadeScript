@@ -1,0 +1,19 @@
+<h3>Userlist</h3>
+<!-- BEGIN DYNAMIC BLOCK: dynUsers -->
+<div class="list_user !EVENODD!">
+  	<a href="!URL!"><img class="avatar" src="!SITEROOT!content/avatars/!AVATAR!" alt="!USERNAME!" /></a>
+  	<div class="info">
+  	   <img src="!SITEROOT!templates/Toys/images/ico_status!STATUS!.gif" alt="!STATUSNAME!" />  <a href="!URL!" class="username!SEX!"><b>!USERNAME!</b></a><br class="Clear" />
+		<span class="Small">(!PLAYS! gameplays, !FAVS! favorite games, !SUBMITS! games submitted)</span><br />
+		<b>From:</b> !LOCATION!
+	</div>
+</div>
+<!-- END DYNAMIC BLOCK: dynUsers -->
+
+<!-- BEGIN DYNAMIC BLOCK: dynPageNav -->
+<p class="pages"><b>Pages:</b>
+<!-- BEGIN DYNAMIC BLOCK: dynPages -->
+	<a href="!SITEROOT!user/list/!PAGE!.html" class="!ACTIVE!">!PAGE!</a>
+<!-- END DYNAMIC BLOCK: dynPages -->
+</p>
+<!-- END DYNAMIC BLOCK: dynPageNav -->

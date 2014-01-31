@@ -1,0 +1,40 @@
+/* User navigation */
+#UserMenu{ margin: 0 0 15px 0; }
+	#UserMenu .active a{ color: #e10000; }
+
+/* Profile data */
+#Profile{ float:left; width:100%; list-style: none; padding:0; margin:0 0 15px 0;}
+	#Profile li{ float: left; width: 195px; line-height: 1.6em; }
+	#Profile li.avatar{ width: 115px; }
+	#Profile li.avatar img{ border: 1px solid; border-color:#cccccc #f3f3f3 #f3f3f3 #cccccc; padding:3px; }
+
+/* Favorites */	
+#Favorites{ list-style: none; margin: 0; padding: 0; }
+	#Favorites li{ float: left; width: 111px; height:110px; margin: 0 15px 15px 0; overflow:hidden; }
+	#Main #Favorites div.Thumb{ height: 75px; }
+	#Main #Favorites .mask{ height: 75px; }
+	#Favorites a.title{ float: left; width: 111px; text-align: center; color: #333333; font-weight: bold; text-decoration: none; background:inherit;}
+	#Favorites a.title:hover{ text-decoration: underline; }
+
+/* Userlist */
+.list_user{ width: 245px; margin:0 0 18px 0; }
+	.list_user .avatar{ float: left; width: 50px; padding: 3px; border: 1px solid; border-color: #cccccc #f3f3f3 #f3f3f3 #cccccc; }
+	.list_user .info{ float: right; width: 175px; }
+	.list_user .info img{ float: left; margin-right: 5px; }
+	.username0, .username1, .username2{ float: left; line-height: 23px; text-decoration: none; font-size:14px; }
+	.username0{ color: #CCCCCC; }
+	.username1{ color: Navy; }
+	.username2{ color: #ff1493; }
+	.list_user .info a:hover{ text-decoration: underline; }
+
+/* Settings */
+#Settings h3{ margin: 20px 0 4px 0; }
+#Settings .Form{ float: left; display:block; width: 478px; padding: 10px; margin:0 0 30px 0; border: 1px solid; background: #fafafa; border-color: #F0F0F0 #CCCCCC #CCCCCC #F0F0F0; }
+#Settings input.Text{ width: 200px; }
+	#Avatar img{ float:left; border: 1px solid; border-color: #cccccc #f3f3f3 #f3f3f3 #cccccc; padding: 3px; margin:0 0px 0 0; }
+	#Avatar p{ margin: 0 0 9px 0; }	
+	
+.odd{ float: left; }
+.even{ float: right; }
+#Password{ display: none; }
+.vivid{ color: #ff4500; }

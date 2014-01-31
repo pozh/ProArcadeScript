@@ -1,0 +1,47 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<h3>Main Pages:</h3>
+<ul class="List">
+	<li class="Caption">
+		<span class="Cell W25">Page</span> <span class="Cell W10">Actions</span>
+		<span class="Cell W25">Page</span> <span class="Cell W10">Actions</span>
+		<span class="Cell W25">Page</span> <span class="Cell">Actions</span>
+	</li>
+	<li><span class="Cell W25">Front Page</span> <span class="Cell W10"><div class="Btn EditCode"><a title="edit page code" href="pages.php?action=editcode&page=index.html"><span class="Hide">Edit Code</span></a></div></span>
+		<span class="Cell W25">Category Page</span> <span class="Cell W10"><div class="Btn EditCode"><a title="edit page code" href="pages.php?action=editcode&page=category.html"><span class="Hide">Edit Code</span></a></div></span>
+		<span class="Cell W25">Play Game Page</span> <span class="Cell"><div class="Btn EditCode"><a title="edit page code" href="pages.php?action=editcode&page=game.html"><span class="Hide">Edit Code</span></a></div></span></li>
+	<li><span class="Cell W25">User CP Page</span> <span class="Cell W10"><div class="Btn EditCode"><a title="edit page code" href="pages.php?action=editcode&page=user.html"><span class="Hide">Edit Code</span></a></div></span>
+		<span class="Cell W25">Custom Page (Base)</span> <span class="Cell"><div class="Btn EditCode"><a title="edit page code" href="pages.php?action=editcode&page=custom.html"><span class="Hide">Edit Code</span></a></div></span></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3>Custom Pages:</h3>
+<ul class="List">
+	<li class="Caption">
+		<span class="Cell W20">Page</span>
+		<span class="Cell W35">Title</span>
+		<span class="Cell W15">Main Menu</span>
+		<span class="Cell W15">Footer Menu</span>
+		<span class="Cell">Actions</span>
+	</li>
+<!-- BEGIN DYNAMIC BLOCK: dynList -->	
+	<li>
+		<span class="Cell W20 Z6">!ID!</span>
+		<span class="Cell W35 Z9">!PAGETITLE! <a href="#" class="Info" title="!COMMENTS!">(?)</a></span>
+		<span class="Cell W15 Z6"><div class="Btn !MAINSTATE!"><a title="!MAINSTATE! page link in the main navigation bar" href="pages.php?action=switch&menu=mainmenu&id=!ID!"><span>!MAINSTATE!</span></a></div></span>
+		<span class="Cell W15 Z6"><div class="Btn !FOOTERSTATE!"><a title="!FOOTERSTATE! page link in the footer navigation bar" href="pages.php?action=switch&menu=footermenu&id=!ID!"><span>!FOOTERSTATE!</span></a></div></span>
+		<span class="Cell Z6"><div class="Btn Edit"><a title="edit page settings" href="pages.php?action=edit&id=!ID!"><span>Edit</span></a></div> 
+			<div class="Btn !STATE!" style="margin-left:5px;"><a title="!STATE! page" href="pages.php?action=switch&id=!ID!"><span class="Hide">!STATE!</span></a></div>
+			<div class="Btn Delete" style="margin-left:5px;"><a title="delete page" href="pages.php?action=delete&id=!ID!"><span>Delete</span></a></div>
+			<div class="Btn Up" style="margin-left:5px;"><a title="move forward (in the navigation bars)" href="pages.php?action=moveup&id=!ID!"><span>Move Up</span></a></div>
+			<div class="Btn Down" style="margin-left:5px;"><a title="move backward (in the navigation bars)" href="pages.php?action=movedown&id=!ID!"><span>Move Down</span></a></div>
+			</span>
+	</li>
+<!-- END DYNAMIC BLOCK: dynList -->
+</ul>
+<p style="margin-top:15px; float:left;"><i><b>NB:</b> All custom pages are stored in the "&lt;site root&gt;/docs/" folder and can be edited manually.</i></p>
+
+
+!ADMINFOOTER!

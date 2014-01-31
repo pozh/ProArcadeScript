@@ -1,0 +1,152 @@
+/* STANDARD TAG REDEFINITIONS */
+html, body, #contents { min-height: 100%; width: 100%; height: 100%; }
+html>body, html>body #contents {	height:auto; }
+#contents { position: absolute; top: 0; left: 0; width:100%; }
+body{ color: #474747; font-family: Arial, Helvetica, sans-serif; background-color: White; margin: 0; padding: 0;  }
+p, ul{ line-height: 1.6em; margin-bottom:1em;}
+a{ color: #BB0000; text-decoration: none; }
+a:hover{ text-decoration: underline; color: #D90000; }
+form, img, div{ margin: 0; padding: 0; border: none; }
+input, select, textarea{ color: #474747; }
+h1, h2, h3, h4, h5{ font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; letter-spacing: .005em; margin: 0; padding: 0; font-weight: normal; }
+h2{ font-size: 1.4em; text-align: center; background-image: url(bg_pagecaption.gif); background-position: bottom center; background-repeat: no-repeat; padding: 0 0 18px 0;  margin-bottom: 0.4em; }
+h3{ clear: both; font-size: 12px; border-bottom: 1px solid #E6E6FA;  color: #C90404; margin-bottom:1em; padding-top:1em;  text-transform: uppercase;  font-weight: normal;  font-family: Tahoma, Arial, Helvetica, sans-serif;  letter-spacing: 2px;        }
+h4{ font-size: 1em; }
+.Justify{ text-align: justify;}
+.Center{ text-align: center;}
+.tr{ text-align: right; }
+.Z9{	z-index: 900;}
+.Z6{	z-index: 600;}
+.Small{	font-size: 11px; font-family: "MS Sans Serif", Geneva, sans-serif; }
+.Large{	font-size:1.5em;}
+.left{ float: left; }
+.right{ float: right; }
+.marked{ font-weight: bold; color: #008601; }
+.debug{ border: 1px solid red; }
+.clear{ clear: both; height: 1px; overflow: hidden; }
+
+#HEAD{  float:left; width: 100%; height: 88px; background-color: Black; margin-bottom:-88px; }
+	#HEAD .Left{ width:29%; float:left; height: 88px;     }
+	#HEAD .Right{ width:70%; float:right; height: 88px;  background-image: url(bg_logoline.gif);  background-repeat: repeat-x;    }
+
+#TOP{ width: 100%; float: left; height: 88px; }
+	#TOP a{ color: #F5F5F5; }
+	#TOP .Logo{	width: 770px; margin-left:auto; margin-right:auto;  height:88px; position:relative; }
+	#TOP .Logo h1{ position: absolute; left:0; top:23px; margin:0; padding:0;	display:block; background-image: url(logo.gif); background-repeat: no-repeat; width: 344px; height: 65px;    }
+	#TOP .Logo h1 b{ display: none; }
+	#TOP .Logo p{ font-size:11px; position: absolute; right:0; top:4px;  color: #8E8E8E;  margin: 0;   }
+	#TOP .Logo ul{ position: absolute; right:0; top:45px; list-style: none; margin:0; padding:0;  	 }
+	#TOP .Logo li{ display: block; float: left; height:24px; line-height:24px; font-size:11px;  background-color: #3B3B3B;  background-image: url(bg_quicknav_left.gif);  background-repeat: no-repeat; margin:0 0 0 12px;    }
+	#TOP .Logo li a{ display: block; float: left; height:24px; line-height:24px; font-size:11px;    background-image: url(bg_quicknav_right.gif);  background-repeat: no-repeat; margin:0; padding: 0 12px 0 12px;  background-position: right;  color: #B5B5B5;     }
+	#TOP .Logo li a:hover{ color: #E8E8E8;  text-decoration: none;  }
+	
+#NAV{ float:left; width:100%; height: 93px; background-image: url(bg_navline.gif);  background-repeat: repeat-x;  background-color: #31475E;  background-position: center;   }
+	#NAV .Wrapper{ width: 770px; height: 93px; position:relative; margin-left:auto; margin-right:auto; }
+	#NAV ul{ position:absolute; right:0; top:65px; padding: 0; margin: 0;  }
+	#NAV li{ margin: 0; line-height: 28px; display: block; height: 28px; background-image: url(bg_nav.gif); background-repeat: repeat-x; float: left; margin-left: 2px; background-color: #28415A;  font-size: 11px;  }
+	#NAV li.Active{ background-image: url(bg_nav_active.gif);  background-color: White;         }
+	#NAV a{ padding: 0; width:83px; overflow: hidden; text-align: center; line-height: 25px; display: block; height: 28px; color: #A8C9EC; font-weight: normal; font-size: 11px; font-family: "MS Sans Serif", Geneva, sans-serif;  float: left;  }
+	#NAV a:hover{ color: #DEECF8; background-image: url(bg_nav.gif); text-decoration: none;   background-repeat: repeat-x;  background-position: 0 5px;   }
+	#NAV li.Active a{ color: #20384F; }
+	#NAV li.Active a:hover{  color: #252525;  background-image: none;  cursor: default;    }
+
+#CONTENT{ width: 100%; float:left; font-size: 0.8em; margin-bottom: 7em;  }
+	#CONTENT .Wrapper{ width:770px; margin-left:auto; margin-right:auto;  margin-top: 10px;      }
+	#CONTENT a.Btn{ display: block; font-size:0.85em;  float:left; height: 18px; line-height: 18px; padding: 2px 27px 2px 27px; 	border: 1px solid #CCCCCC;  background-color: #FAFAFA;  text-decoration: none;  	 }
+	#CONTENT a.Btn:hover{ background-color: #FCFCFC; }
+	#CONTENT a.Off{ color: #D90000; border-bottom: 1px solid #BABABA; border-right: 1px solid #BABABA; border-left: 1px solid #EEEEEE; border-top: 1px solid #EEEEEE; }
+	#CONTENT a.On{ color: #228B22;   border-right: 1px solid #EEEEEE;  border-bottom: 1px solid #EEEEEE;  border-top: 1px solid #BABABA;  border-left: 1px solid #BABABA;         }
+	#CONTENT .Submenu{ list-style: none; text-align: center; padding-bottom:0.5em;    }
+	#CONTENT .Submenu li{ display: inline;	margin:0 2px 0 2px;}
+	#CONTENT .Submenu a{ font-size: 0.85em; padding: 4px 27px 4px 27px; background-color: #F0f0f0; text-decoration: none; color: #323232; border-bottom: 1px solid #BABABA; border-right: 1px solid #BABABA; border-left: 1px solid #EEEEEE; border-top: 1px solid #EEEEEE; }
+	#CONTENT .Submenu a:hover{ color: black; background-color: #f8f8f8; }
+	#CONTENT .Submenu .Active a{ background-color: #FFFFFF;  border-top: 1px solid #BABABA;  border-left: 1px solid #BABABA;  border-right: 1px solid #EEEEEE;  border-bottom: 1px solid #EEEEEE;  color: #B70000;     }
+	#CONTENT .Thin a{	padding: 1px 15px 1px 15px; 	}
+	
+	/* Form styles */
+	#CONTENT Form{ margin: 0 0 1em 0; width:100% }
+	#CONTENT Form.Form{ float:left; padding:5px 0 5px 0; margin:0; list-style:none; background-color: #FCFCFC; border: 5px solid #FAFAFA;  }
+	#CONTENT div.Block{ float:left; padding:0 0 10px 0;  }
+
+	#CONTENT div.Left{ width: 362px; float:left;  clear:left;   }
+	#CONTENT div.Right{ width: 362px; float:right; padding-left:18px;   }
+	#CONTENT div.Center{ clear: both; }
+
+	#CONTENT input.Text{ height: 18px; line-height: 18px; padding: 2px; border: 1px solid #C8C8C8; }
+	#CONTENT select.Text{ height: 22px; line-height: 22px; padding: 2px; border: 1px solid #C8C8C8; }
+	#CONTENT textarea.Text{ padding: 0; border: 1px solid #C8C8C8; overflow: auto;}
+	#CONTENT .Med{ width: 360px; }	
+	#CONTENT .Short{ width: 60px; }	
+	#CONTENT .Wide{ width: 768px; }	
+
+	#CONTENT div.SmallForm{ width: 280px; margin-left:auto; margin-right:auto;    }
+	#CONTENT div.SmallForm .Text{	width: 253px; }
+	#CONTENT div.SmallForm div.Block{ float:left; width:260px; padding:5px 10px 5px 10px;  }
+
+	#CONTENT .Block .Title{ font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; font-size: 0.85em; font-weight: bold;  color: Black; 	}
+	#CONTENT .Block .Title b{ color: #FB0000;  margin-left: 0.3em;  }
+	#CONTENT .Block .SingleLine{ margin-top:1.5em; font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; font-size: 0.85em; font-weight: bold;  color: Black; 	}
+	#CONTENT div.Divider{ clear: both; padding-top: 1em; }	
+	#CONTENT div.Submit{clear: both;  border-top:3px solid #FAFAFA; padding-top:5px; text-align:center;	}
+	#CONTENT div.Submit input{font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; padding:0px 27px 0px 27px;	}	
+	#CONTENT .Error{ display: block; font-size:0.85em; 	font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; color: Red; font-weight: bold; }
+	#CONTENT .Message{ display: block; font-size: 1.2em; 	font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; color: #1E48C1; font-weight: normal;  text-align: center;  }
+	
+	/* List */
+	#CONTENT .List { list-style: none; padding:0; margin:20px 0 0 0;  }
+	#CONTENT .List *{ z-index: 0; }
+	#CONTENT .List li{ display:block; float:left; width:100%; padding: 0; margin: 0; border-right:1px solid #F0F0F0; border-bottom:1px solid #F0F0F0;     }
+	#CONTENT .List .Caption{ font-weight: bold; font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif; background-color: #FAFAFA; border-top: 1px solid #F0F0F0; font-size: 11px; }
+	#CONTENT .List a{ color: #003C75; }
+	#CONTENT .List span.Cell{ padding: 5px 0 5px 5px; display:block; float:left; border-left:1px solid #F0F0F0;  position: relative;    }
+	#CONTENT .List .Current{ border-bottom: 1px solid #FF8C00;   	}
+	#CONTENT .List span.W10{	width:8%; }
+	#CONTENT .List span.W6{	width:6%; }
+	#CONTENT .List span.W15{	width:14%; }
+	#CONTENT .List span.W12{	width:11%; }
+	#CONTENT .List span.W20{	width:18%; }
+	#CONTENT .List span.W25{	width:24%; }
+	#CONTENT .List span.W30{	width:28%; }
+	#CONTENT .List span.W35{	width:33%; }
+	#CONTENT .List span.W40{	width:39%; }
+	#CONTENT .List span.W50{	width:49%; }
+	#CONTENT .List span.W60{	width:59%; }
+	#CONTENT .List span.W70{	width:69%; }
+	#CONTENT .List span.W80{	width:75%; }
+
+	#CONTENT .List a span{ display: none; }
+	#CONTENT .List div.Btn{ background-position: 0 -16px; display: block; height: 16px; width: 16px; line-height: 18px; padding: 0; margin: 2px; border: none;  background-color: White;  background-repeat: no-repeat;  float: left;      }
+	#CONTENT .List div.Btn a{  display: block; height: 16px; width: 16px; line-height: 18px; padding: 0; margin: 0; border: none;  background-repeat: no-repeat;  float: left;      }
+	#CONTENT .List div.Btn span{display: none;	}
+	#CONTENT .List div.Btn a:hover{ background-image:none; }
+	#CONTENT .List div.Delete, #CONTENT .List div.Delete a{ background-image: url(btn_delete.gif); }
+	#CONTENT .List div.Up, #CONTENT .List div.Up a{ background-image: url(btn_up.gif); }
+	#CONTENT .List div.Down, #CONTENT .List div.Down a{ background-image: url(btn_down.gif); }
+	#CONTENT .List div.Edit, #CONTENT .List div.Edit a{ background-image: url(btn_edit.gif);   }
+	#CONTENT .List div.EditCode, #CONTENT .List div.EditCode a{ background-image: url(btn_code.gif); }
+	#CONTENT .List div.activate, #CONTENT .List div.activate a{ background-image: url(btn_inactive.gif); }
+	#CONTENT .List div.deactivate, #CONTENT .List div.deactivate a{ background-image: url(btn_active.gif); }
+	#CONTENT .List div.feature, #CONTENT .List div.feature a{ background-image: url(btn_normal.gif); }
+	#CONTENT .List div.defeature, #CONTENT .List div.defeature a{ background-image: url(btn_featured.gif); }
+	#CONTENT .List span.Good{ color: #32CD32; font-weight: bold; }
+	#CONTENT .List span.Bad{ color: red; font-weight: bold; }
+	#CONTENT .List a.Asc{ right:27px; top: 11px; width:13px; height:10px; background-image: url(ico_asc.gif); background-repeat: no-repeat;  display: block;  position: absolute;  }
+	#CONTENT .List a.Desc{ right:10px; top: 11px; width:13px; height:10px; background-image: url(ico_desc.gif); background-repeat: no-repeat;  display: block;  position: absolute;  }
+
+	#CONTENT a.Info{ text-decoration: none; cursor: default;  }
+	#CONTENT a.Info:hover{ color: Black; background-color: #e5fada; }
+	#CONTENT a.Info span{ display: none; }
+	
+	#CONTENT p.Pages{	clear:both; display:block; text-align:center; padding:15px 0 0 0;	}
+	#CONTENT p.Pages a{ color: black; padding: 0 5px 0 5px; margin:0; font-family: "trebuchet ms",arial,tahoma,verdana,sans-serif;}
+	#CONTENT p.Pages a.PageActive{ background-color: #D50000;  color: White;}
+	#CONTENT p.Pages a:hover{ background-color: #F70000;  text-decoration: none; color: White;  }
+
+	#CONTENT .Graph{ position:relative;	margin:0; padding:0; border:1px solid black; list-style: none;	display:block; float:left; width:768px; height:210px; }
+	#CONTENT .Graph li{ display: block; position:absolute; bottom:0; margin: 0; padding:3px 0 0 0; width:23px;  background-color: #416B98;  color: White;  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;    text-align: center;       }
+	#CONTENT .Graph li.Message{ display: block; position:absolute; bottom:0; margin: 0; padding: 0 0 100px 0; width: 768px;  background-color: White;  color: #CE0000;      text-align: center;  font-weight: bold;        }
+	#CONTENT .Days{ margin: 0; padding: 0 0 0 10px; list-style: none; display: block; float: left; width: 758px; height: 20px; }
+	#CONTENT .Days li{ display: block; float:left; margin: 0 0 0 1px; padding:0; width:23px; overflow:hidden; color: black;    font-size: 10px;  text-align: center;       }
+
+#FOOTER{ clear:both; position: absolute; bottom: 0; height: 35px; background-color: #181818; color: #7E7E7E; width: 100%; text-align: center; padding: 0;  border-top: 18px solid #F8F8F8;  }
+	#FOOTER .Wrapper{ width: 770px; margin-left: auto; margin-right: auto; height: 35px; line-height: 35px; color: #6C6C6C; font-size: 11px; text-align: right; }

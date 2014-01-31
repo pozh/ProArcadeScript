@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: rategame.php
+Disallow: search.php
+Disallow: comment.php
+Disallow: favorites.php
+Disallow: logout.php
+Disallow: admin/
+Disallow: content/
+DIsallow: include/
+Disallow: templates/

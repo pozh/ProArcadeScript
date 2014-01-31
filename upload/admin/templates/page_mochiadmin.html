@@ -1,0 +1,77 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<!-- BEGIN DYNAMIC BLOCK: dynForm -->
+<form action="mochiadmin.php" method="post">
+<h3>General Settings</h3>
+<div class="Left">
+	<div class="Block">
+		<div class="Title">Publisher ID<b>*</b> &nbsp;&nbsp; (Don't have one? <a href="https://www.mochimedia.com/r/01a6505b78d2ac0d" class="Info" title="Click the link to visit Mochimedia home and register as a publisher.">Take it here</a>)</div>
+		<div class="Input"><input class="Med Text" type="Text" name="publisher_id" value="!PUBLISHERID!" /><span class="Error">!PUBLISHERIDERROR!</span></div>
+	</div>
+</div>
+
+<h3>Import Settings</h3>
+<div class="Left">
+	<div class="Block">
+		<div class="Title">Allowed Content Rating <a href="#" title="Restrict the game feed to only containing a particular content rating." class="Info">(?)</a></div>
+		<div class="Input">
+      <select name="rating" class="Text Med">
+				<option value="all" !RATINGALL!>all</option>
+				<option value="everyone" !RATINGEVERYONE!>everyone</option>
+        <option value="teen" !RATINGTEEN!>teen</option>
+        <option value="mature" !RATINGMATURE!>mature</option>
+			</select>
+    </div>                                             
+	</div>
+	<div class="Block">
+		<div class="SingleLine">Import <input class="Short Text" type="Text" name="games_number" value="!GAMESNUMBER!" /> games (Empty to import all games.) 
+			<a href="#" title="You can limit the number of games returned in the feed. This is useful for feed readers or widgets in which you want to pull a smaller, faster, feed for real-time display." class="Info">(?)</a>
+		</div>
+		<div class="SingleLine">Skip &nbsp;&nbsp;&nbsp; <input class="Short Text" type="Text" name="skip_number" value="!SKIPNUMBER!" /> games <a href="#" title="You can also use the offset parameter to fetch older games in smaller chunks. Note that the feed can change at any moment so iterating over the feed with the offset parameter is not guaranteed to be reliable." class="Info">(?)</a></div>
+	</div>
+</div>
+<div class="Right">
+	<div class="Block">
+		<div class="Title">Category (in the feed, not on your site) <a href="#" title="You may place the slug of any category here to limit the type of games in the feed. Games may contain more than one category, so you may see the same game show up across different categories." class="Info">(?)</a></div>
+		<div class="Input"><input class="Med Text" type="Text" name="category" value="!CATEGORY!" />
+    </div>
+	</div>
+	<div class="Block">
+		<div class="Title">Filter by tag <a href="#" title="Enter tags separated by commas to filter the results returned by Mochi server. Only games containing one or more tags from your list will be added to your database." class="Info">(?)</a></div>
+		<div class="Input"><input class="Med Text" type="Text" name="tags" value="!TAGS!" />
+    </div>
+	</div>
+</div>
+
+<div class="Divider"></div>
+
+
+<div class="Divider"></div>
+<div class="Submit">
+	<input name="btn_import" type="submit" value="Save settings and import games"> <input name="btn_save" type="submit" value="Save settings">
+</div>
+</form>
+
+<h3>Utilities</h3>
+<ul class="Submenu" style="text-align:left; padding-left:0; margin-left:0;">
+	<li><a href="mochiadmin.php?utility=categories">List categories existing in the Mochi games feed</a></li>
+</ul>
+
+<p><br /><b>NB:</b> <i>Please don't try to import all mochi games at once unless you have a dedicated server and that's not a problem for your system to parse 27+ Mb JSON.
+		Instead of stressing your server import the games by portions. Even on a shared hosting you can import 100 games at once without a problem.<br /><br />
+		Online manual for this page and instructions about the feed importer's <b>scheduling</b> are available <a href="http://proarcadescript.com/manual/mochi-games/">here</a>.</i></p> 
+	
+
+<!-- END DYNAMIC BLOCK: dynForm -->
+
+<!-- BEGIN DYNAMIC BLOCK: dynText -->
+!TEXT!
+<div class="Divider"></div>
+<ul class="Submenu" style="text-align:center; padding-left:0; margin-left:0;">
+	<li><a href="mochiadmin.php">Back</a></li>
+</ul>
+<!-- END DYNAMIC BLOCK: dynText -->
+
+
+!ADMINFOOTER!

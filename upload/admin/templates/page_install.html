@@ -1,0 +1,26 @@
+!ADMINHEADER!
+<h2>!SITETITLE! - Install games</h2>
+
+!MESSAGE!
+<span class="Error">!ERROR!</span>
+<div>
+	<form action="install.php" method="post">
+	<input type="Hidden" name="action" value="!ACTION!" />
+	
+	<div class="Center">
+		<div class="Block">
+		!CATEGORIESSETUP!	
+		</div>	
+		<div class="Block">
+		<div><textarea class="Text Wide" name="code" rows="18">!CODE!</textarea></div>
+		</div>
+	</div>
+	<div class="Divider"></div>
+	<div class="Submit">
+		<input type="submit" value="!BTN!" />
+	</div>
+	</form>
+</div>
+
+
+!ADMINFOOTER!

@@ -1,0 +1,65 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<h3>Category settings:</h3>
+
+<div>
+	<form action="content.php" method="post">
+	<input type="Hidden" name="action" value="!ACTION!">
+	<input type="Hidden" name="cat" value="!EDITCAT!">
+	<div class="Left">
+		<div class="Block">
+			<div class="Title">Title</div>
+			<div><input value="!CATTITLE!" class="Text Med" type="text" name="title" /> <span class="Error">!TITLEERROR!</span></div>
+		</div>
+	</div>
+	<div class="Right">
+		<div class="Block">
+			<div class="Title">Latin Title (will be used in links)</div>
+			<div><input value="!CATLATINTITLE!" class="Text Med" type="text" name="latintitle" /> <span class="Error">!LATINTITLEERROR!</span></div>
+		</div>
+<!-- BEGIN DYNAMIC BLOCK: dynPosition -->
+		<div class="Block">
+			<div class="Title">Insert After</div>
+			<div>
+				<select name="position" class="Text Med">
+				<option value="-1">Insert in the first position</option>
+				<option selected value="1000000">Insert in the end of the list</option>
+				!POSITIONS!
+				</select>
+			</div>
+		</div>
+<!-- END DYNAMIC BLOCK: dynPosition -->
+	</div>
+	<div class="Left">
+		<div class="Block">
+			<div class="Title" ><input !ONMAINCHECKED! type="Checkbox" value="yes" name="onmain" />Show in the games list on homepage</div>
+		</div>
+	</div>
+
+	<div class="Center">
+		<div class="Block">
+			<div class="Title">Description</div>
+			<div><input value="!CATDESC!" class="Text Wide" type="text" name="description" /> <span class="Error">!DESCERROR!</span></div>
+		</div>
+	</div>
+
+	<div class="Center">
+		<div class="Block">
+			<div class="Title">Keywords</div>
+			<div><input value="!CATKEYWORDS!" class="Text Wide" type="text" name="keywords" /> <span class="Error">!KEYWORDSERROR!</span></div>
+		</div>
+	</div>
+
+	<div class="Divider"></div>
+	<div class="Submit">
+		<input type="submit" name="submit" value="!BTNTITLE!" />
+	</div>
+	</form>
+	<br class="clear" />
+	<p><i><b>NB:</b> <i>You can leave the <b>Latin Title</b> field empty if your site is in English or another <u>european</u> language.
+		The value of that field will be generated automatically out of the <b>Title</b></i></p>
+ </div>
+
+
+!ADMINFOOTER!

@@ -1,0 +1,47 @@
+!ADMINHEADER!
+!CONTENTTOP!
+
+<h3>Existing Blocks:</h3>
+
+<ul class="List">
+	<li class="Caption">
+		<span class="Cell W20">ID</span>
+		<span class="Cell W35">&nbsp;Title</span>
+		<span class="Cell W6">Front</span>
+		<span class="Cell W6">Cat.</span>
+		<span class="Cell W6">Game</span>
+		<span class="Cell W6">User</span>
+		<span class="Cell W6">Cust.</span>
+		<span class="Cell">Actions</span>
+	</li>
+<!-- BEGIN DYNAMIC BLOCK: dynList -->	
+	<li>
+		<span class="Cell W20 Z6">!ID!</span>
+		<span class="Cell W35 Z9">&nbsp;<b>!BLOCKTITLE!</b> <a href="#" class="Info" title="!COMMENTS!">(?)</a></span>
+		<span class="Cell W6 Z6"><div class="Btn !FRONTSTATE!"><a title="!GAMESTATE! block" href="blocks.php?action=switch&page=front&id=!ID!"><span class="Hide">!FRONTSTATE!</span></a></div></span>
+		<span class="Cell W6 Z6"><div class="Btn !CATSTATE!"><a title="!GAMESTATE! block" href="blocks.php?action=switch&page=cat&id=!ID!"><span class="Hide">!CATSTATE!</span></a></div></span>
+		<span class="Cell W6 Z6"><div class="Btn !GAMESTATE!"><a title="!GAMESTATE! block" href="blocks.php?action=switch&page=game&id=!ID!"><span class="Hide">!GAMESTATE!</span></a></div></span>
+		<span class="Cell W6 Z6"><div class="Btn !USERSTATE!"><a title="!GAMESTATE! block" href="blocks.php?action=switch&page=user&id=!ID!"><span class="Hide">!USERSTATE!</span></a></div></span>
+		<span class="Cell W6 Z6"><div class="Btn !CUSTOMSTATE!"><a title="!GAMESTATE! block" href="blocks.php?action=switch&page=custom&id=!ID!"><span class="Hide">!CUSTOMSTATE!</span></a></div></span>
+		<span class="Cell Z6"><div class="Btn Edit"><a title="edit block settings" href="blocks.php?action=edit&id=!ID!"><span class="Hide">Edit</span></a></div> 
+			<div class="Btn EditCode" style="margin-left:15px;"><a title="edit block code" href="blocks.php?action=editcode&id=!ID!"><span class="Hide">Edit Code</span></a></div>
+			<div class="Btn Delete" style="margin-left:15px;"><a title="delete block" href="blocks.php?action=delete&id=!ID!"><span class="Hide">Delete</span></a></div></span>
+	</li>
+<!-- END DYNAMIC BLOCK: dynList -->
+</ul>
+<div style="margin-top:15px; float:left;">
+	<div class="Left">
+		<p><b>Legend:</b><br />
+		<img src="images/legend_active.gif" align="absmiddle" /> - Active block, click to deactivate<br />
+		<img src="images/legend_inactive.gif" align="absmiddle" /> - Inactive block, click to activate</p>
+	</div>
+	<div class="Right">
+	   <p><img src="images/legend_edit.gif" align="absmiddle" /> - Edit block's settings<br />
+	   	<img src="images/legend_code.gif" align="absmiddle" /> - Edit block's code<br />
+			<img src="images/legend_delete.gif" align="absmiddle" /> - Delete block completely</p>
+	</div>
+	<br class="clear" />
+	<p><i><b>NB:</b> To place a newly created block in a page you should insert the block ID into that page's template. Go to <a href="pages.php">Pages</a> to do that.</i></p>
+	<p><i><b>NB2:</b> When the ID is placed in the templates, you can handle this block's activeness here, using buttons from the "Front", "Category", etc. columns.  </i></p>
+</div>
+!ADMINFOOTER!

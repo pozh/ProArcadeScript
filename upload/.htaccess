@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^user/([_!.@a-zA-Z0-9\ \'\-]+)/?([_!@a-zA-Z0-9\ \'\-]+)?(.html)?$ userhome.php?page=$1&show=$2 [QSA,L]
+RewriteRule ^news/(.*[^/])/?$ shownews.php?id=$1 [L]
+
+
+RewriteRule ^(page([0-9]+))?/?$ index.php?page=$2 [L]
+RewriteRule ^play/(.*[^/])/?$ game.php?game=$1 [L]
+RewriteRule ^category/(.*[^/])/(page([0-9]*)/?)?/?$ cat.php?cat=$1&page=$3 [L]
+
+#---------------------------------------------------------------

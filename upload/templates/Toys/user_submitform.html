@@ -1,0 +1,28 @@
+<h3>Submit your game</h3>
+	<form class="Form" action="!SITEROOT!user/!USERNAME!/submit.html" method="post" enctype="multipart/form-data">
+	<div class="Block">
+		<div class="Title">Title</div>
+		<div class="Input"><input value="!SUBMITTITLE!" class="Text" type="text" name="title" /><span class="Error">!TITLEERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Description</div>
+		<div class="Input"><textarea class="Text" type="text" name="description">!SUBMITDESC!</textarea><span class="Error">!DESCERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Keywords (space separated)</div>
+		<div class="Input"><input value="!SUBMITKEYWORDS!" class="Text" type="text" name="keywords" /><span class="Error">!KEYWORDSERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">File (Allowed formats: !FORMATS!)</div>
+		<div class="Input"><input type="file" class="Text" size="9" name="file"  /><span class="Error">!FILEERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Screenshot (JPG or GIF format at least 200 x 130 pixels)</div>
+		<div class="Input"><input type="file" class="Text" size="9" name="screenshot"  /><span class="Error">!SCREENSHOTERROR!</span></div>
+	</div>
+	<div class="Block">
+		<div class="Title">Thumbnail (JPG or GIF format at least 105 x 70 pixels)</div>
+		<div class="Input"><input type="file" class="Text" size="9" name="thumbnail"  /><span class="Error">!THUMBERROR!</span></div>
+	</div>
+	<div class="Block"><input type="submit" name="submit" value="Submit" /></div>
+	</form>
